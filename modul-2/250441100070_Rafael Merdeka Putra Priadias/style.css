@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f4c151;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.produk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.produk img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.deskripsi {
+    max-width: 400px;
+}
+
+.deskripsi h2 {
+    color: #2ecc71;
+}
+
+.deskripsi p {
+    color: #686868;
+}
+
+button {
+    background-color: gold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.produk img {
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.deskripsi {
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+.produk img {
+    transition: transform 0.3s ease;
+}
+
+.produk img:hover {
+    transform: scale(1.05);
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+header p {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
