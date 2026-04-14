@@ -1,0 +1,28 @@
+body{
+    overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+.nav-link {
+    transition: 0.3s;
+}
+.nav-link:hover{
+    color: #0d6efd;
+}
+.card {
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+#galeri img{
+    transition: 0.3s;
+}
+#galeri img:hover {
+    transform: scale(1.05);
+}
+iframe {
+    max-width: 100%;
+}
