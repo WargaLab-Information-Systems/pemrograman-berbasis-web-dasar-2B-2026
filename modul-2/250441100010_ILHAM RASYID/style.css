@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #27ae60;
+}
+
+.menu a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    gap: 49px;
+}
+
+.deskripsi {
+    flex: 1;
+}
+
+.deskripsi h1 {
+    font-size: 40px;
+    color: #2c3e50;
+}
+
+.deskripsi p {
+    color: #7f8c8d;
+    margin: 20px 0;
+}
+
+.tombol {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+}
+
+.gambar {
+    flex: 1;
+}
+
+.gambar img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
