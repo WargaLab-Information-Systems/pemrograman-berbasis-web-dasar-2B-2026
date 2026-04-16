@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial;
+      padding-top: 70px;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('gojek2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+                        /* NAVBAR WOI */
+    #navbar {
+      background: rgba(0, 170, 19, 0.8);
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    #navbar.scrolled {
+      background: #00AA13;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .carousel-box {
+      max-width: 900px;
+      margin: auto;
+      margin-top: 30px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(109, 104, 104, 0.42);
+    }
+
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    @media (max-width: 768px) {
+      .carousel-item img {
+        height: 250px;
+      }
+    }
+
+    #about, #services, #contact {
+      color: white;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+
+                    <!-- WOI NAVBAR -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <h1>hi, ferdi</h1>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section id="home">
+  <div class="carousel-box">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="gojek2031.jpg" class="d-block w-100">
+          <div class="hero-text">
+            <h3>SELAMAT DATANG</h3>
+            <p>Kami Solusi Terbaik Untuk kebutuhan sehari-hari Anda</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="container mt-5 pt-5">
+  <h2 class="text-center mb-4">Tentang Kami</h2>
+  <p class="text-center">
+    Gojek didirikan pada tahun 2010 oleh Nadiem Makarim sebagai layanan ojek online yang kemudian berkembang menjadi ekosistem digital besar di Indonesia dan Asia Tenggara. Perusahaan kami bergerak di bidang jasa dan teknologi yang berfokus pada
+    pelayanan terbaik untuk pelanggan. Kami memiliki ribuan Mitra yang siap
+    membantu dan melayani kebutuhan sehari-hari Anda.
+  </p>
+</section>
+
+<section id="services" class="container mt-5">
+  <h2 class="text-center mb-4">Layanan Kami</h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Goride.jpg" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>GoRide & GoCar</h5>
+          <p>Layanan transportasi online</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="GoFood.jpg" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>GoFood</h5>
+          <p>Kebutuhan konsumsi cepat</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="GoSend.jpg" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>GoSend</h5>
+          <p>Efisiensi antar barang Anda</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="container mt-5">
+  <h2 class="text-center mb-4">Contact</h2>
+
+  <form>
+    <div class="mb-3">
+      <textarea class="form-control" rows="2" placeholder="Sampaikan Masukan Anda"></textarea>
+    </div>
+    <button class="btn btn-secondary w-100 text-white">Kirim</button>
+  </form>
+</section>
+
+<footer class="text-white text-center mt-5">
+  <p>© 2026 MyCompany | All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
