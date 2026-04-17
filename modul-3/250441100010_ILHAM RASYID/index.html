@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav class="bg-[#02b4b4] shadow-md sticky top-0 z-50 text-white">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="#" class="text-xl font-medium">My Portfolio</a>
+        <div class="hidden md:flex space-x-6">
+          <a href="#home" class="text-white hover:text-gray-200 font-medium" href="#">Home</a>
+          <a href="#about" class="text-white/80 hover:text-white transition">About</a>
+          <a href="#projects" class="text-white/80 hover:text-white transition">Projects</a>
+          <a href="#contact" class="text-white/80 hover:text-white transition">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="text-center py-16 bg-blue-100">
+      <img src="img/fotosaya.jpeg" alt="Ilham" class="mx-auto rounded-full border border-white p-1 w-[200px]" />
+      <h1 class="text-5xl font-light mt-6 mb-3 text-gray-900">Ilham Rasyid</h1>
+      <p class="text-lg font-light text-gray-600">Saya adalah seorang mahasiswa Sistem Informasi di Universitas Trunojoyo Madura</p>
+    </section>
+
+    <section id="about" class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-medium">About Me</h2>
+        </div>
+        <div class="flex flex-wrap justify-center text-center text-lg gap-y-6">
+          <div class="w-full md:w-1/3 px-4">
+            <p>
+              saya adalah seorang mahasiswa yang sedang menempuh pendidikan di Universitas Trunojoyo Madura. Saya memiliki minat yang besar dalam bidang teknologi dan web development, serta selalu bersemangat untuk belajar hal-hal baru.
+              Selain itu, saya juga aktif dalam berbagai kegiatan organisasi kampus yang membantu saya mengembangkan keterampilan yang saya miliki.
+            </p>
+          </div>
+          <div class="w-full md:w-1/3 px-4">
+            <p>
+              saya memiliki pengalaman dalam percobaan pembuatan website dan pengembangan web, yang memungkinkan saya untuk menerapkan pengetahuan yang saya peroleh selama kuliah. Saya selalu berusaha untuk memberikan yang terbaik dalam
+              setiap percobaan pembuatan website yang saya kerjakan, dan saya percaya bahwa kerja keras dan dedikasi adalah kunci untuk mencapai kesuksesan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-12 bg-blue-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-medium">My Projects</h2>
+        </div>
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/3 px-4 mb-6">
+            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+              <img src="img/projek/1.jpg" class="w-full object-cover" alt="Project 1" />
+              <div class="p-4">
+                <p class="text-gray-700">Project 1 Description</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-6">
+            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+              <img src="img/projek/2.jpg" class="w-full object-cover" alt="Project 2" />
+              <div class="p-4">
+                <p class="text-gray-700">Project 2 Description</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-6">
+            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+              <img src="img/projek/3.jpg" class="w-full object-cover" alt="Project 3" />
+              <div class="p-4">
+                <p class="text-gray-700">Project 3 Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-medium">Contact Me</h2>
+        </div>
+        <div class="flex justify-center">
+          <div class="w-full md:w-1/2 px-4">
+            <form>
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2">Nama</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="name" placeholder="Masukkan Nama Anda" />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="email" placeholder="Masukkan Email Anda" />
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+                <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="message" rows="5" placeholder="Masukkan pesan Anda"></textarea>
+              </div>
+              <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
