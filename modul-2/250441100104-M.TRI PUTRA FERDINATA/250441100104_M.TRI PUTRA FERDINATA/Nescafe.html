@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Nescafe</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    /* INI NAVBAR */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: #b71c1c;
+        padding: 15px 40px;
+        color: white;
+    }
+
+    nav h2 {
+        margin: 0;
+    }
+
+    nav div a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    nav div a:hover {
+        color: #ffcdd2;
+    }
+
+    /* INI HERO */
+    .hero {
+        background: linear-gradient(rgba(225,225,255,0.5), rgba(183,28,28,0.8)),
+                    url('bg nescafe (2).png');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: white;
+        color: #b71c1c;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: 500;
+    }
+
+    .btn:hover {
+        background-color: #ffcdd2;
+    }
+
+    /* INI MENU */
+    .menu {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .menu h2 {
+        margin-bottom: 30px;
+    }
+
+    .menu-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        width: 220px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.1s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .card h4 {
+        margin: 10px 0 5px;
+    }
+
+    .card p {
+        color: #b71c1c;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #8e1b1b;
+        color: white;
+        text-align: center;
+        padding: 10px 0; /* DIPERKECIL */
+        width: 100%;
+    }
+
+    footer svg {
+        width: 30px; /* sedikit lebih kecil */
+        margin-bottom: 5px;
+        transition: 0.3s;
+    }
+
+    footer a {
+        display: inline-block 50px;
+    }
+    </style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>NESCAFÉ</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#menu">Produk</a>
+        <a href="#kontak">Kontak</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Awali Harimu dengan NESCAFÉ</h1>
+    <p>
+        Kopi instan berkualitas dengan rasa nikmat dan praktis. Kami percaya bahwa setiap orang layak mendapatkan secangkir kopi yang luar biasa. Tiap cangkir kopi memiliki kekuatan untuk membuat dunia menjadi lebih baik.
+    </p>
+    <a href="#" class="btn">Beli Sekarang</a>
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+    <h2>Produk</h2>
+
+    <div class="menu-container">
+        <div class="card">
+            <img src="foto1.png">
+            <h4>Nescafé Latte</h4>
+            <p>Rp12.000</p>
+        </div>
+
+        <div class="card">
+            <img src="foto2.png">
+            <h4>Nescafé Ice Black</h4>
+            <p>Rp15.000</p>
+        </div>
+
+        <div class="card">
+            <img src="foto3.png">
+            <h4>Nescafé Gula Aren</h4>
+            <p>Rp12.000</p>
+        </div>
+
+        <div class="card">
+            <img src="foto4.png">
+            <h4>Nescafé Oat Latte</h4>
+            <p>Rp15.000</p>
+        </div>
+
+        <div class="card">
+            <img src="foto5.png">
+            <h4>Nescafé Original</h4>
+            <p>Rp12.000</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="kontak">
+    <a href="https://shopee.sg/ndgsg" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" width="80">
+    </a>
+    <p>© 2026 NESCAFÉ</p>
+</footer>
+
+</body>
+</html>
