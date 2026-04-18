@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-gray-900 font-sans scroll-smooth">
+
+    <nav class="sticky top-0 bg-blue-50 z-50 border-b border-blue-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Development Port.</div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-50">
+        <div class="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
+        <div class="flex-1 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+                Hi, I'm Aris
+                <span class="block bg-gradient-to-r from-red-600 to-indigo-600 bg-clip-text text-transparent">Creative Web Developer</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-xl leading-relaxed mb-6">
+                Seorang web developer yang fokus membangun antarmuka web yang bersih, fungsional, dan responsif
+                menggunakan teknologi modern seperti HTML, CSS, dan framework front-end.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <a href="#projects" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">
+                    Lihat Project
+                </a>
+                <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full border border-gray-300 text-gray-700 font-semibold hover:border-blue-500 hover:text-blue-600 transition">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <div class="relative w-48 h-48 md:w-64 md:h-64">
+                <div class="absolute -inset-1 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur opacity-40"></div>
+                <img src="../../assets/images/Remini20211226122348232.jpg" alt="Profile Picture" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-blue-50 border-t border-blue-100 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800">My Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl ">
+                    <img src="html.png" alt="E-Commerce App" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">HTML Sederhana</h3>
+                        <p class="text-gray-600 text-sm mb-4">Proyek dasar struktur halaman web menggunakan elemen HTML seperti heading, paragraf, list, dan tautan.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs font-semibold px-2 py-1 bg-orange-100 text-orange-700 rounded italic">HTML</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-100 text-blue-700 rounded italic">Basic Layout</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="form-html sederhana.png" alt="Social Dashboard" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Form Basic HTML</h3>
+                        <p class="text-gray-600 text-sm mb-4">Proyek pembuatan form input data dengan field teks, pilihan, dan tombol kirim untuk latihan validasi dasar.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs font-semibold px-2 py-1 bg-indigo-100 text-indigo-700 rounded italic">HTML Form</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-teal-100 text-teal-700 rounded italic">Input Validation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="bootstrap.png" alt="Personal Blog" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Bootstrap Tugas</h3>
+                        <p class="text-gray-600 text-sm mb-4">Implementasi halaman responsif menggunakan komponen Bootstrap untuk mempercepat pengembangan antarmuka.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs font-semibold px-2 py-1 bg-purple-100 text-purple-700 rounded italic">Bootstrap</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-100 text-blue-700 rounded italic">Responsive UI</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-blue-50 border-t border-blue-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center text-gray-800">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+                    <h3 class="text-lg font-semibold mb-2">Soft Skills</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>Mudah beradaptasi dengan lingkungan baru</li>
+                        <li>Bekerja sama tim</li>
+                        <li>Mampu kerja di bawah tekanan</li>
+                        <li>Memiliki rasa ingin tahu yang tinggi</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+                    <h3 class="text-lg font-semibold mb-2">Language Skills</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>Bahasa Inggris: pasif</li>
+                        <li>Bahasa Indonesia: aktif</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-blue-50 border-t border-blue-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-3 text-gray-800">Contact</h2>
+            <p class="text-gray-600 mb-3">Hubungi saya lewat WhatsApp:</p>
+            <a href="https://wa.me/6281249344301" target="_blank" class="inline-flex items-center justify-center gap-1 text-2xl font-extrabold text-green-600 hover:text-green-700 transition">
+                <img src="https://png.pngtree.com/png-vector/20230225/ourlarge/pngtree-whatsapp-icon-social-media-png-image_6618452.png" alt="wa-icon" class="w-8 h-8">                
+                <span>081249344301</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-400 text-sm border-t border-gray-100">
+        <p>&copy; 2026 Crafted with using <span class="text-blue-500 italic">Tailwind CSS</span></p>
+    </footer>
+
+</body>
+</html>
