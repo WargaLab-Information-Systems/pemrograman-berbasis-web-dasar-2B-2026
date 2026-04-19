@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    
+    <!--Navigasi bar -->
+    <nav class="flex justify-between item center p-5  bg-teal-100 ">
+        <h1 class="text-sm md:text-xl font-bold">Selamat datang di portofolio saya</h1>
+        <ul class="flex gap-3 md:gap-8">
+            <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-500">about</a></li>
+            <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="h-screen flex items-center justify-center bg-blue-500">
+            <div class="text-center">
+            <h2 class="text-4xl md:text-6xl font-bold">Halo, Saya Adriyan </h2>
+            <p class="mt-5 text-lg">Mahasiswa yang sedang belajar Web Development</p>
+            <a href="#projects" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">Lihat Proyek</a>
+            </div>
+    </section>
+
+    <section id="about" class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10">
+        <div>
+        <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+        <p class="text-gray-600 leading-relaxed">
+            Saya adalah mahasiswa semester 2 di program studi Sistem Informasi di Universitas Trunojoyo Madura  yang  sedang belajar HTML, CSS, dan Tailwind CSS. 
+            saya memiliki hobi mengedit video bernuansa meme dan minat di dunia bisnis digital
+        </p>
+        </div>
+        <div class="flex justify-center">
+        <div class="w-64 h-64 bg-gray-300 rounded-full">
+            <img src="WhatsApp Image 2026-04-02 at 12.01.44.jpeg" alt="" style="border-radius: 50%; height: 256px; width: 256px;">
+        </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="bg-teal-500 py-20">
+        <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Project Saya</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-blue-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Project 1</h3>
+                <p class="text-gray-600">Membuat Tabel Curiculum Vitae menggunakan html.</p>
+            </div>
+            <div class="bg-blue-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Project 2</h3>
+                <p class="text-gray-600">Membuat halaman produk menggunakan css sederhana.</p>
+            </div>
+            <div class="bg-blue-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Project 3</h3>
+                <p class="text-gray-600">Membuat Program Manajemen Keuangan menggunakan bahasa Python.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-4xl mx-auto px-4 py-20">
+        <h2 class="text-3xl font-bold text-center mb-10">Contact</h2>
+        <form class="grid gap-4">
+        <input type="text" placeholder="Nama" class="p-3 border rounded-lg" />
+        <input type="email" placeholder="Email" class="p-3 border rounded-lg" />
+        <textarea placeholder="Pesan" class="p-3 border rounded-lg"></textarea>
+        <button class="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">Kirim</button>
+        </form>
+    </section>
+
+
+    <footer class="text-center py-6 bg-gray-800 text-white">
+        <p>&copy; 2026 Adriyan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
