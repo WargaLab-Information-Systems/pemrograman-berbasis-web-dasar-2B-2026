@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth md:scroll-auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-screen">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+
+        <div class="bg-[#5E7AC4] text-white flex flex-col justify-center items-center p-10">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold mb-1">
+                    Hello Prospective Students
+                </h1>
+
+                <img src="UTS/gambar_login page.png" class="aspect-3/2 object-cover" alt="illustration">
+
+                <p class="text-xl font-bold leading-relaxed mt-6">
+                    Unlock your professional potential. Learn from industry leaders and stay ahead of the competition.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 flex items-center justify-center p-6">
+            <div class="w-full max-w-sm">
+
+                <h2 class="text-center text-2xl font-sans font-bold text-[#393939] mb-2">LOGIN PAGE</h2>
+                <p class="text-center text-[#757575] font-semibold text-lg mb-6">
+                    Masukkan Username dan Password Anda
+                </p>
+
+                <form id="loginForm" class="space-y-4">
+
+                    <input type="email" id="email" placeholder="Email Address" required
+                        class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF] focus:outline-none focus:ring-2 focus:ring-indigo-400 font-bold text-base text-center placeholder:text-[#3852B4]/70">
+
+                    <input type="password" id="password" placeholder="Password" required
+                        class="w-full px-4 py-3 rounded-lg bg-[#FFFFFF] focus:outline-none focus:ring-2 focus:ring-indigo-400 font-bold text-base text-center placeholder:text-[#3852B4]/70">
+
+                    <button type="submit" id="btnLogin"
+                        class="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-300 cursor-pointer">
+                        Login
+                    </button>
+
+                </form>
+
+                <div class="flex items-center gap-4 my-6">
+                    <div class="flex-1 h-px bg-gray-400"></div>
+                    <span class="text-gray-400 font-bold text-sm whitespace-nowrap">Or Login With</span>
+                    <div class="flex-1 h-px bg-gray-400"></div>
+                </div>
+
+                <button
+                    class="w-full flex items-center justify-center gap-2 bg-white border rounded-lg py-3 hover:bg-gray-100 transition">
+
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5">
+                    <span class="text-sm">Sign in with Google</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btnLogin = document.getElementById('btnLogin');
+
+            btnLogin.innerText = "Processing...";
+
+            setTimeout(() => {
+                alert("Login Manual Berhasil!");
+                // --- PROSES REDIRECT ---
+                window.location.href = 'homepage.html';
+            }, 1000);
+        });
+
+        // Fungsi Helper untuk decode JWT Google
+        function decodeJwtResponse(token) {
+            let base64Url = token.split('.')[1];
+            let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            let jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            return JSON.parse(jsonPayload);
+        }
+    </script>
+
+</body>
+
+</html>
