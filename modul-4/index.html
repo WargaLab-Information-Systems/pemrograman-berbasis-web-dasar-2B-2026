@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Education</title>
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="dark:bg-gray-900 text-slate-800 dark:text-gray-200 transition duration-300">
+
+    <header id="header" class="fixed bg-white dark:bg-gray-800 top-0 left-0 w-full flex items-center transition-all duration-300 py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                    <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                </button>
+                <nav id="nav-menu"
+                    class="hidden absolute bg-white dark:bg-gray-800 lg:dark:bg-transparent shadow-lg rounded-lg w-full right-4 top-full mb-5 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none px-3">
+                    <ul class="block lg:flex items-center">
+                        <li class="group"><a class="text-sm font-bold text-slate-600 dark:text-gray-200 py-2 mx-4 flex group-hover:text-[#3852B4]" href="#">HOME</a></li>
+                        <li class="group"><a class="text-sm font-bold text-slate-600 dark:text-gray-200 py-2 mx-4 flex group-hover:text-[#3852B4]" href="#course">COURSES</a></li>
+                        <li class="group"><a class="text-sm font-bold text-slate-600 dark:text-gray-200 py-2 mx-4 flex group-hover:text-[#3852B4]" href="#page">THEACHERS</a></li>
+                        <li class="group"><a class="text-sm font-bold text-slate-600 dark:text-gray-200 py-2 mx-4 flex group-hover:text-[#3852B4]" href="#page">PAGES</a></li>
+                        <li class="group"><a class="text-sm font-bold text-slate-600 dark:text-gray-200 py-2 mx-4 flex group-hover:text-[#3852B4]" href="#blog">BLOG</a></li>
+                        <li class="group"><a class="text-sm font-bold text-slate-600 dark:text-gray-200 py-2 mx-4 flex group-hover:text-[#3852B4]" href="login.html">CONTACT</a></li>
+                        <li class="group mt-3 lg:mt-0 lg:ml-auto flex items-center gap-3 ml-3">
+                            <label class="relative inline-block w-14 h-7 cursor-pointer lg:block">
+                                <input type="checkbox" class="peer sr-only">
+                                <div class="w-full h-full bg-[#83cbd8] rounded-full transition-colors duration-300 peer-checked:bg-[#2b4360]">
+                                </div>
+                                <div class="absolute top-1/2 left-1 w-6 h-6 bg-yellow-300 rounded-full -translate-y-1/2 transition-transform duration-300 peer-checked:translate-x-7 peer-checked:bg-gray-300">
+                                </div>
+                            </label>
+                            <a href="login.html"
+                                class="block text-center text-white bg-[#3852B4] py-2 px-4 rounded-md hover:shadow-lg hover:opacity-80 transition duration-300"
+                                target="_blank">➔ CONTACT US</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="bg-[#EBF1FF] dark:bg-gray-900 pt-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2">
+                    <span class="text-[#3852B4] font-semibold text-sm tracking-wide">E - LEARNING PLATFORM</span>
+                    <h1 class="text-5xl font-bold text-[#3852B4] mt-2 leading-tight">Online Course Education</h1>
+                    <h2 class="text-3xl font-semibold text-gray-700 dark:text-gray-200 mt-2 mb-6">Feels Like Real Classroom</h2>
+                    <div class="flex flex-wrap gap-5 text-gray-600 dark:text-gray-200 mb-6">
+                        <div class="flex items-center gap-2">
+                            <img src="src/img/checklist.svg" width="15">
+                            <p class="text-sm">Get Certificate</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="src/img/checklist.svg" width="15">
+                            <p class="text-sm">Gain Job Ready Skill</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="src/img/checklist.svg" width="15">
+                            <p class="text-sm">Great Life</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="bg-[#3852B4] hover:opacity-80 transition duration-300 ease-in-out text-white py-3 px-6 rounded-md font-semibold shadow">GET
+                            STARTED →</a>
+                        <a href="#"
+                            class="bg-[#F08D39] hover:opacity-80 transition duration-300 ease-in-out text-white py-3 px-6 rounded-md font-semibold shadow">GET
+                            COURSE →</a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 lg:mt-25 flex justify-end">
+                    <img src="src/img/gambar_orang.png" alt="Gambar Home" class="max-w-md w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#5E7AC4] dark:bg-gray-800 py-5" id="page">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2">
+                    <img src="src/img/gambar_course.png" alt="Gambar Home" class="max-w-md w-full my-7">
+                </div>
+                <div class="w-full lg:w-1/2 mt-10 lg:mt-0">
+                    <span class="text-white font-semibold text-sm tracking-wide">GET TO KNOW ABOUT US</span>
+                    <h2 class="text-3xl  font-bold leading-tight text-white">Transform your future with skills that
+                        matter. Start learning today, lead tomorrow.</h2>
+                    <p class="text-gray-200 text-base max-w-md font-semibold">Can helping you build in-demand skills
+                        quickly and advance you career in an ever-changing job market.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-orange-400 hover:opacity-80 transition duration-300 ease-in-out text-white py-3 px-6 rounded-md font-semibold shadow mt-5">About More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#EBF1FF] dark:bg-gray-900" id="course">
+        <div class="container mx-auto px-6 py-16">
+            <div class="flex flex-wrap justify-center gap-8 mb-16 text-[#3852B4] text-sm font-semibold">
+                <div class="flex items-center gap-2">
+                    <img src="src/img/icon_folder.svg" width="18">
+                    <p>20k+ Online Course</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="src/img/icon_jam.svg" width="18">
+                    <p>Lifetime Access</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="src/img/icon_uang.svg" width="18">
+                    <p>Value For Money</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="src/img/icon_headphone.svg" width="18">
+                    <p>Lifetime Support</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="src/img/people_icon.svg" width="18">
+                    <p>Community Support</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="src/img/icon_download.svg" width="18">
+                    <p>Free Download Course</p>
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 dark:text-gray-200 mb-10" >OUR POPULAR COURSE</h1>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 mb-10">
+                <div class="card-hover bg-white dark:bg-gray-800 flex items-center flex-wrap rounded-2xl p-4 shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/icon_toa.svg" width="45">
+                    <div class="ml-3 min-w-0">
+                        <p class="font-semibold text-slate-800 dark:text-gray-200">Digital Marketing</p>
+                        <span class="text-sm text-gray-500">354 Courses</span>
+                    </div>
+                </div>
+                <div class="card-hover bg-white dark:bg-gray-800 flex items-center flex-wrap rounded-2xl p-4 shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/icon_pallet.svg" width="45">
+                    <div class="m-3 min-w-0">
+                        <p class="font-semibold text-slate-800 dark:text-gray-200">Graphic Design</p>
+                        <span class="text-sm text-gray-500">553 Courses</span>
+                    </div>
+                </div>
+                <div class="card-hover bg-white dark:bg-gray-800 flex items-center flex-wrap rounded-2xl p-4 shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/icon_hp.svg" width="45">
+                    <div class="ml-3 min-w-0">
+                        <p class="font-semibold text-slate-800 dark:text-gray-200">UI/UX Design</p>
+                        <span class="text-sm text-gray-500">175 Courses</span>
+                    </div>
+                </div>
+                <div class="card-hover bg-white dark:bg-gray-800 flex items-center flex-wrap rounded-2xl p-4 shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/icon_webpage.svg" width="45">
+                    <div class="ml-3 min-w-0">
+                        <p class="font-semibold text-slate-800 dark:text-gray-200">Web Development</p>
+                        <span class="text-sm text-gray-500">211 Courses</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/thumbnail-1.png" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Learn Figma - UI/UX Design Fundamental</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <img src="src/img/profil_card.svg" class="mr-2">
+                            <p>Programmer_Handal</p>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="src/img/folder_card.svg" class="mr-2">
+                            <span class="mr-4">20 Files</span>
+                            <img src="src/img/jam_card.svg" class="mr-2">
+                            <span>5 Hours</span>
+                            <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/thumbnail-2.png" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Python Fundamental - For Algorithm Programmer</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <img src="src/img/profil_card.svg" class="mr-2">
+                            <p>Programmer_Handal</p>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="src/img/folder_card.svg" class="mr-2">
+                            <span class="mr-4">30 Files</span>
+                            <img src="src/img/jam_card.svg" class="mr-2">
+                            <span>6 Hours</span>
+                            <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/thumbnail-3.png" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Visual Hook - Course Digital Marketing</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <img src="src/img/profil_card.svg" class="mr-2">
+                            <p>Programmer_Handal</p>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="src/img/folder_card.svg" class="mr-2">
+                            <span class="mr-4">25 Files</span>
+                            <img src="src/img/jam_card.svg" class="mr-2">
+                            <span>5 Hours</span>
+                            <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl dark:hover:shadow-lg transition">
+                    <img src="src/img/thumbnail-4.png" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Layout - Graphic Design For Beginner</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <img src="src/img/profil_card.svg" class="mr-2">
+                            <p>Programmer_Handal</p>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="src/img/folder_card.svg" class="mr-2">
+                            <span class="mr-4">20 Files</span>
+                            <img src="src/img/jam_card.svg" class="mr-2">
+                            <span>6 Hours</span>
+                            <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#"
+                    class="bg-[#3852B4] hover:opacity-80 transition duration-300 ease-in-out text-white py-3 px-6 rounded-md font-semibold shadow">View
+                    All Course →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#5E7AC4] dark:bg-gray-800" id="blog">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid lg:grid-cols-3 gap-10 ">
+                <h2 class="text-white font-semibold text-3xl leading-snug">Dive Into our Online Courses and Your Learning</h2>
+                <div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-5">
+                    <div class="grid">
+                        <h4 class="font-semibold text-white mb-4">About Me</h4>
+                        <ul class="space-y-2 text-white text-sm">
+                            <li><a href="#" class="hover:text-gray-200">Short Profile</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Online Course</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Monthly Discount</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid">
+                        <h4 class="font-semibold text-white mb-4">Navigation</h4>
+                        <ul class="space-y-2 text-white text-sm">
+                            <li><a href="#" class="hover:text-gray-200">Home</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Teachers</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Pages</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid">
+                        <h4 class="font-semibold text-white mb-4">More Information</h4>
+                        <ul class="space-y-2 text-white text-sm">
+                            <li><a href="#" class="hover:text-gray-200">Privacy and terms</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Copyright</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Accessibility</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#3852B4] dark:bg-gray-900 p-7 text-white text-center text-sm">
+        <p>&copy;2026 Online Courses. All Right Reserved. Designed by Farrell Danendra Rafif Bustomi</p>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>
