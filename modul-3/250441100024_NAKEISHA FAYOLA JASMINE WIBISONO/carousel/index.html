@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Carousel Template · Bootstrap v5.0</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#myCarousel">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bestseller">bestseller</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="hijab.jpg" width="100%" height="100%" alt="hijab variant">
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Array Hijab.</h1>
+              <p>Arayy Hijab adalah Brand hijab modern yang mengutamakan kenyamanan dan gaya stylish.
+                Cocok digunakan untuk aktivitas sehari-hari maupun acara formal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="variant" class="container marketing">
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img width="130" height="140" src="pashmina.png" alt="pashmina">
+
+            <h2>Pashmina</h2>
+            <p>hijab untuk stylish modeling</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img width="140" height="140" src="segi empat.jpeg" alt="">
+
+            <h2>Segi Empat</h2>
+            <p>Hijab yang cocok untuk keseharian
+            </p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img width="140" height="140" src="instan.jpeg" alt="hijab instan">
+
+            <h2>Instan</h2>
+            <p>Hijab yang cocok untuk kegiatan bebas diluar.</p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Arayy Hijab. <span class="text-muted">Syar'i, Stylish, and
+                Creative modeling</span>
+            </h2>
+            <p class="lead">Temukan berbagai pilihan hijab dan wujudkan dunia stylishmu</p>
+          </div>
+          <div class="col-md-5">
+            <img src="segi empat.jpeg" width="500" height="500" alt="jilbab">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+            </svg>
+
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div id="bestseller" class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Our Best Seller Product. <span class="text-muted">Pashmina Hijab
+                Viscose.</span>
+            </h2>
+            <p class="lead">Hijab ini adalah yang paling populer di kalangan gen Z, bahannya sangat mudah untuk di
+              styling dan Aesthetic.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img width="450" height="500" src="viscose.jpg" alt="">
+
+
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+
+            <h2 class="featurette-heading">Our Reccomended Product. <span class="text-muted">Rabbani Hijab.</span></h2>
+            <p class="lead">hijab yang sering digunakan karena modelnya
+              yang unik dan beragam dan siap pakai.</p>
+          </div>
+          <div class="col-md-5">
+            <img width="500" height="500" src="rabbani.jpeg" alt="rabbani">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      </div>
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#myCarousel">Back to top</a></p>
+        <p>&copy; Array Hijab Company, Inc.</p>
+      </footer>
+  </main>
+
+
+  <script src="dist/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
