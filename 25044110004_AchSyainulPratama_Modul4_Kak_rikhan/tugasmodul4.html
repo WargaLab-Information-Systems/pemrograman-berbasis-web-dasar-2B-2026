@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root[data-theme="light"] {
+            --primary-blue: #5d78ff;
+            --dark-blue: #3f51b5;
+            --orange-accent: #ff9800;
+            --bg-body: #ffffff;
+            --bg-hero: #f0f4ff;
+            --bg-card: #ffffff;
+            --bg-navbar: #ffffff;
+            --bg-stats: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --shadow: rgba(0,0,0,0.1);
+            --border-color: #dee2e6;
+            --bg-light-section: #f8f9fa;
+        }
+
+        :root[data-theme="dark"] {
+            --primary-blue: #7c9bff;
+            --dark-blue: #5c6bc0;
+            --orange-accent: #ffb74d;
+            --bg-body: #121212;
+            --bg-hero: #1a1f3a;
+            --bg-card: #1e1e2e;
+            --bg-navbar: #1a1a2e;
+            --bg-stats: #1e1e2e;
+            --text-main: #e0e0e0;
+            --text-muted: #9e9e9e;
+            --shadow: rgba(0,0,0,0.4);
+            --border-color: #333;
+            --bg-light-section: #161616;
+        }
+
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        #darkModeToggle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-blue);
+            background: transparent;
+            color: var(--primary-blue);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #darkModeToggle:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .navbar {
+            background-color: var(--bg-navbar) !important;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--dark-blue) !important;
+        }
+
+        .nav-link {
+            color: var(--text-main) !important;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-blue) !important;
+        }
+
+        
+        .hero-section {
+            background-color: var(--bg-hero);
+            padding: 60px 0;
+            transition: background-color 0.3s ease;
+        }
+        .section-blue {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 80px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .stats-bar {
+            background-color: var(--bg-stats);
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: background-color 0.3s ease;
+        }
+
+        .bg-light-section {
+            background-color: var(--bg-light-section);
+            transition: background-color 0.3s ease;
+        }
+        .course-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card .card-title {
+            color: var(--primary-blue);
+        }
+
+        .course-card .text-muted {
+            color: var(--text-muted) !important;
+        }
+        .category-pill {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px 10px;
+            box-shadow: 0 2px 10px var(--shadow);
+            color: var(--text-main);
+            transition: background-color 0.3s ease;
+        }
+
+        .footer {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 50px 0;
+            transition: background-color 0.3s ease;
+        }
+        .btn-orange {
+            background-color: var(--orange-accent);
+            color: white;
+        }
+
+        .text-primary-custom {
+            color: var(--primary-blue) !important;
+        }
+
+        .text-orange { color: var(--orange-accent); }
+        .text-xs { font-size: 0.8rem; }
+
+        [data-theme="dark"] .bg-white {
+            background-color: var(--bg-card) !important;
+        }
+
+        [data-theme="dark"] .shadow-sm {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+        }
+
+        [data-theme="dark"] .text-dark,
+        [data-theme="dark"] h1, [data-theme="dark"] h2,
+        [data-theme="dark"] h3, [data-theme="dark"] h4,
+        [data-theme="dark"] h5, [data-theme="dark"] h6 {
+            color: var(--text-main) !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">PRAM COURSE</a>
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">COURSES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">TEACHERS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button id="darkModeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon" id="toggleIcon"></i>
+                </button>
+                <a href="#" class="btn btn-primary px-4 rounded-pill">CONTACT US</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h6 class="text-primary fw-bold">E - LEARNING PLATFORM</h6>
+                    <h1 class="display-4 fw-bold">Online Course Education <br> Feels Like Real Classroom</h1>
+                    <ul class="list-unstyled d-flex gap-3 my-4">
+                        <li><i class="fas fa-check-circle text-primary"></i> Get Certificate</li>
+                        <li><i class="fas fa-check-circle text-primary"></i> Gain Job Skill</li>
+                    </ul>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary btn-lg">GET STARTED</button>
+                        <button class="btn btn-orange btn-lg">GET COURSE</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img src="gambar_orang.png" alt="Students" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-blue">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img src="gambar_course.png" class="img-fluid rounded" alt="About Us">
+                </div>
+                <div class="col-lg-7">
+                    <h6>GET TO KNOW ABOUT US</h6>
+                    <h2 class="display-5 fw-bold mb-4">Transform your future with skills that matter.</h2>
+                    <p>Start learning today, lead tomorrow with our industry-standard courses.</p>
+                    <button class="btn btn-orange">About More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container mt-n5 mb-5 position-relative" style="z-index:2;">
+        <div class="row stats-bar p-4 rounded shadow-sm text-center mx-1">
+            <div class="col text-primary-custom"><i class="fas fa-video fa-lg d-block mb-1"></i> 20k+ Online Course</div>
+            <div class="col text-primary-custom"><i class="fas fa-clock fa-lg d-block mb-1"></i> Lifetime Access</div>
+            <div class="col text-primary-custom"><i class="fas fa-dollar-sign fa-lg d-block mb-1"></i> Value For Money</div>
+            <div class="col text-primary-custom"><i class="fas fa-shield-alt fa-lg d-block mb-1"></i> Lifetime Support</div>
+            <div class="col text-primary-custom"><i class="fas fa-users fa-lg d-block mb-1"></i> Community Support</div>
+            <div class="col text-primary-custom"><i class="fas fa-download fa-lg d-block mb-1"></i> Free Download</div>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="row g-3 text-center">
+            <div class="col-6 col-md-3"><div class="category-pill shadow-sm"><i class="fas fa-laptop fa-2x d-block text-primary-custom mb-2"></i> Digital Marketing<br><span class="text-muted text-xs">154 Courses</span></div></div>
+            <div class="col-6 col-md-3"><div class="category-pill shadow-sm"><i class="fas fa-palette fa-2x d-block text-primary-custom mb-2"></i> Graphic Design<br><span class="text-muted text-xs">113 Courses</span></div></div>
+            <div class="col-6 col-md-3"><div class="category-pill shadow-sm"><i class="fas fa-layer-group fa-2x d-block text-primary-custom mb-2"></i> UI/UX Design<br><span class="text-muted text-xs">175 Courses</span></div></div>
+            <div class="col-6 col-md-3"><div class="category-pill shadow-sm"><i class="fas fa-code fa-2x d-block text-primary-custom mb-2"></i> Web Development<br><span class="text-muted text-xs">213 Courses</span></div></div>
+        </div>
+    </div>
+
+<section class="py-5 bg-light-section">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">OUR POPULAR COURSE</h2>
+        <div class="row g-4 mb-5">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card course-card h-100">
+                    <img src="thumbnail-1.png" class="card-img-top" alt="Course Figma">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Learn Figma - UI/UX Design Fundamental</h5>
+                        <div class="d-flex justify-content-between text-muted text-xs mt-3">
+                            <span><i class="fas fa-user me-1"></i> Beginner</span>
+                            <span><i class="fas fa-clock me-1"></i> 2.5 Hours</span>
+                            <span class="text-orange"><i class="fas fa-tag me-1"></i> $15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card course-card h-100">
+                    <img src="thumbnail-2.png" class="card-img-top" alt="Course Python">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Python Fundamental - For Algoritma Pemrograman</h5>
+                        <div class="d-flex justify-content-between text-muted text-xs mt-3">
+                            <span><i class="fas fa-user me-1"></i> Intermediate</span>
+                            <span><i class="fas fa-clock me-1"></i> 5 Hours</span>
+                            <span class="text-orange"><i class="fas fa-tag me-1"></i> $25</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card course-card h-100">
+                    <img src="thumbnail-3.png" class="card-img-top" alt="Course Marketing">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Visual Hook - Course Digital Marketing Eps. 3</h5>
+                        <div class="d-flex justify-content-between text-muted text-xs mt-3">
+                            <span><i class="fas fa-user me-1"></i> Pro</span>
+                            <span><i class="fas fa-clock me-1"></i> 3 Hours</span>
+                            <span class="text-orange"><i class="fas fa-tag me-1"></i> $20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card course-card h-100">
+                    <img src="thumbnail-4.png" class="card-img-top" alt="Course Graphic">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Layout - Graphic Design For Beginner</h5>
+                        <div class="d-flex justify-content-between text-muted text-xs mt-3">
+                            <span><i class="fas fa-user me-1"></i> Beginner</span>
+                            <span><i class="fas fa-clock me-1"></i> 4 Hours</span>
+                            <span class="text-orange"><i class="fas fa-tag me-1"></i> $18</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-3">
+            <button class="btn btn-primary rounded-pill px-4 py-2">VIEW ALL COURSE <i class="fas fa-arrow-right ms-1"></i></button>
+        </div>
+    </div>
+</section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>Dive into our Online Courses</h5>
+                    <p>Ignite your learning journey with us today.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h6>About Me</h6>
+                    <ul class="list-unstyled small">
+                        <li>Short Profile</li>
+                        <li>Online Course</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6>Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li>Home</li>
+                        <li>Teachers</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center small">@2026 Online Course. All right reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const toggleIcon = document.getElementById('toggleIcon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+
+        toggleBtn.addEventListener('click', function () {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateIcon(next);
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                toggleIcon.className = 'fas fa-sun';
+                toggleBtn.title = 'Switch to Light Mode';
+            } else {
+                toggleIcon.className = 'fas fa-moon';
+                toggleBtn.title = 'Switch to Dark Mode';
+            }
+        }
+    </script>
+</body>
+</html>
