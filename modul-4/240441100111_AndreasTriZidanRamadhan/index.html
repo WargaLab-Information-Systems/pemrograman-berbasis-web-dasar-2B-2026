@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="icon" href="Assets/courses.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode:'class',
+            theme: {
+                extend: {
+                    colors:{
+                        dark1:'#1e1e1e',
+                        dark2:'#252526',
+                        dark3:'#2d2d30',
+                        dark4:'#3e3e42',
+                        dark5:'#d1d5db',
+                        1:'#3952b4',
+                        2:'#5E7AC4',
+                        3:'#F3BE7A',
+                        4:'#F08D39',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-sans bg-blue-50 dark:bg-dark4">
+    <div class="fixed w-full flex items-center justify-end">
+        <button id="theme" class="bg-dark5 dark:bg-white p-2 flex items-center justify-center gap-2 hover:bg-gray-500 dark:hover:bg-dark5- rounded-full">
+            <img id="dark" src="Assets/dark mode.webp" alt="moon" class="w-8 h-8">
+            <img id="light" src="Assets/light mode.webp" alt="sun" class="w-8 h-8 hidden">
+        </button>
+    </div>
+    <nav class="fixed top-0 h-16 flex items-center justify-between w-full px-20 bg-white shadow-md dark:bg-dark1">
+        <div class="flex-1 flex items-center gap-20 dark:text-dark5">
+            <a href="#home" class="text-md text-1 font-bold dark:text-white">HOME</a>
+            <a href="#courses" class="text-md font-bold">COURSES</a>
+            <a href="#teachers" class="text-md font-bold">TEACHERS</a>
+            <a href="#pages" class="text-md font-bold">PAGES</a>
+            <a href="#blog" class="text-md font-bold">BLOG</a>
+            <a href="#contact" class="text-md font-bold">CONTACT</a>
+        </div>
+        <div class="flex-1 flex items-center justify-end gap-4">
+            <div class="bg-blue-800 dark:bg-dark4 w-32 h-10 rounded-lg flex items-center justify-center cursor-pointer">
+                <a href="#contact" class="text-sm text-white font-bold">→ CONTACT US</a>
+            </div>
+                <!-- <button id="theme" class="bg-dark5 dark:bg-white p-2 flex items-center justify-center gap-2 hover:bg-gray-500 dark:hover:bg-dark5- rounded-full">
+                    <img id="dark" src="Assets/dark mode.webp" alt="moon" class="w-8 h-8">
+                    <img id="light" src="Assets/light mode.webp" alt="sun" class="w-8 h-8 hidden">
+                </button> -->
+        </div>
+    </nav>
+    <section id="home" class="mt-16 flex items-center justify-center px-20">
+        <div class="flex-1">
+            <h4 class="text-xl text-blue-800 dark:text-black font-semibold">E-LEARNING PLATFORM</h4>
+            <h1 class="text-6xl text-blue-800 dark:text-black font-bold">Online Course Education</h1>
+            <h2 class="text-4xl text-black dark:text-dark5 font-semibold">Feels Likes Real Classroom</h2>
+            <div class="flex items-center justify-start gap-4 mt-6 dark:text-dark5">
+                <div class="flex items-center justify-center gap-2">
+                    <img src="Assets/icon_checklist.svg" alt="" class="rounded-full">
+                    <p>Get Certificate</p>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <img src="Assets/icon_checklist.svg" alt="" class="rounded-full">
+                    <p>Gain Job Ready Skills</p>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <img src="Assets/icon_checklist.svg" alt="" class="rounded-full">
+                    <p>Greay life</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-start gap-6 mt-8">
+                <div class="bg-blue-800 dark:bg-black w-40 h-10 rounded-lg flex items-center justify-center cursor-pointer">
+                    <p class="text-white font-semibold">GET STARTED →</p>
+                </div>
+                <div class="bg-orange-400 dark:bg-dark5 w-40 h-10 rounded-lg flex items-center justify-center cursor-pointer">
+                    <p class="text-white dark:text-black font-semibold">GET COURSE →</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1">
+            <img src="Assets/gambar_orang.png" alt="">
+        </div>
+    </section>
+    <section id="courses" class="py-20 bg-2 dark:bg-dark2 flex items-center justify-center px-20 gap-12">
+        <div class="flex-1">
+            <img src="Assets/gambar_course.png" alt="" class="w-lg">
+        </div>
+        <div class="flex-1 text-white dark:text-dark5">
+            <h4 class="font-semibold mb-4">GET TO KNOW ABOUT US</h4>
+            <h1 class="text-4xl font-bold mb-4">Transform your future with skills that matter. Start learning today, lead tomorrow.</h1>
+            <p class="text-sm font-semibold mb-4">Can helping you build in-demand skills quickly and advance your career in an ever-changing job marketing.</p>
+            <div class="bg-orange-400 dark:bg-dark1 w-40 h-10 rounded-lg flex items-center justify-center cursor-pointer">
+                <p class="text-white font-semibold">About More →</p>
+            </div>
+        </div>
+    </section>
+    <section class="py-12">
+        <div class="flex items-center justify-center gap-10 px-10 text-1 dark:text-black">
+            <div class="w-64 h-24 flex items-center justify-center gap-2">
+                <img src="Assets/icon_folder.svg" alt="" class="w-6 h-6">
+                <p class="text-sm font-semibold">20k+ Online Course</p>
+            </div>
+            <div class="w-64 h-24 flex items-center justify-center gap-2">
+                <img src="Assets/icon_jam.svg" alt="" class="w-6 h-6">
+                <p class="text-sm font-semibold">Lifetime Access</p>
+            </div>
+            <div class="w-64 h-24 flex items-center justify-center gap-2">
+                <img src="Assets/icon_uang.svg" alt="" class="w-6 h-6">
+                <p class="text-sm font-semibold">Value for Money</p>
+            </div>
+            <div class="w-64 h-24 flex items-center justify-center gap-2">
+                <img src="Assets/icon_headphone.svg" alt="" class="w-6 h-6">
+                <p class="text-sm font-semibold">Lifetime Support</p>
+            </div>
+            <div class="w-64 h-24 flex items-center justify-center gap-2">
+                <img src="Assets/people_icon.svg" alt="" class="w-6 h-6">
+                <p class="text-sm font-semibold">Community Support</p>
+            </div>
+            <div class="w-64 h-24 flex items-center justify-center gap-2">
+                <img src="Assets/icon_download.svg" alt="" class="w-6 h-6">
+                <p class="text-sm font-semibold">Free Download Course</p>
+            </div>
+        </div>
+    </section>
+    <section id="teachers" class="py-20">
+        <div class="flex items-center justify-center">
+            <h1 class="text-4xl font-bold dark:text-white">OUR POPULAR COURSES</h1>
+        </div>
+        <div class="flex items-center justify-center gap-3 px-10 mt-12">
+            <div class="bg-white dark:bg-dark2 rounded-xl shadow-md w-72 h-24 flex items-center justify-start pl-2 gap-2">
+                <div class="w-16 h-16 rounded-xl">
+                    <img src="Assets/icon_toa.svg" alt="" class="">
+                </div>
+                <div class="text-black dark:text-white">
+                    <p class="font-semibold">Digital Marketing</p>
+                    <p class="text-sm">354 Courses</p>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-dark2 rounded-xl shadow-md w-72 h-24 flex items-center justify-start pl-2 gap-2">
+                <div class="w-16 h-16 rounded-xl">
+                    <img src="Assets/icon_pallet.svg" alt="" class="">
+                </div>
+                <div class="text-black dark:text-white">
+                    <p class="font-semibold">Graphic Design</p>
+                    <p class="text-sm">553 Courses</p>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-dark2 rounded-xl shadow-md w-72 h-24 flex items-center justify-start pl-2 gap-2">
+                <div class="w-16 h-16 rounded-xl">
+                    <img src="Assets/icon_hp.svg" alt="" class="">
+                </div>
+                <div class="text-black dark:text-white">
+                    <p class="font-semibold">UI/UX Design</p>
+                    <p class="text-sm">175 Courses</p>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-dark2 rounded-xl shadow-md w-72 h-24 flex items-center justify-start pl-2 gap-2">
+                <div class="w-16 h-16 rounded-xl">
+                    <img src="Assets/icon_webpage.svg" alt="" class="">
+                </div>
+                <div class="text-black dark:text-white">
+                    <p class="font-semibold">Web Development</p>
+                    <p class="text-sm">211 Courses</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center gap-3 px-10 mt-8">
+            <div class="bg-white dark:bg-dark2 dark:text-white rounded-xl w-72 h-72 shadow-md flex flex-col p-2 gap-2">
+                <div class="w-full flex flex-col items-center">
+                    <img src="Assets/thumbnail-1.png" alt="" class="w-64 h-32 rounded-xl">
+                    <h3 class="text-lg font-semibold pl-2">Learn Figma -UI/UX Design Fundamental</h3>
+                </div>
+                <div class="flex items-center gap-1 pl-2">
+                    <img src="Assets/profil_card.svg" alt="" class="w-6 h-6">
+                    <p class="text-xs ">Programmer_Handal</p>
+                </div>
+                <div class="flex items-center justify-between gap-1 pl-2">
+                    <div class="flex items-center gap-3">
+                        <img src="Assets/folder_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">20 Files</p>
+                        <img src="Assets/jam_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">5 Hours</p>
+                    </div>
+                    <div class="bg-red-600 w-8 h-6 rounded-md flex items-center justify-center">
+                        <p class="text-white text-xs font-semibold">FREE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-dark2 dark:text-white rounded-xl w-72 h-72 shadow-md flex flex-col p-2 gap-2">
+                <div class="w-full flex flex-col items-center">
+                    <img src="Assets/thumbnail-2.png" alt="" class="w-64 h-32 rounded-xl">
+                    <h3 class="text-lg font-semibold pl-2">Pyhton Fundamental For Algoritma Pemrograman</h3>
+                </div>
+                <div class="flex items-center gap-1 pl-2">
+                    <img src="Assets/profil_card.svg" alt="" class="w-6 h-6">
+                    <p class="text-xs ">Programmer_Handal</p>
+                </div>
+                <div class="flex items-center justify-between gap-1 pl-2">
+                    <div class="flex items-center gap-3">
+                        <img src="Assets/folder_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">20 Files</p>
+                        <img src="Assets/jam_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">5 Hours</p>
+                    </div>
+                    <div class="bg-red-600 w-8 h-6 rounded-md flex items-center justify-center">
+                        <p class="text-white text-xs font-semibold">FREE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-dark2 dark:text-white rounded-xl w-72 h-72 shadow-md flex flex-col p-2 gap-2">
+                <div class="w-full flex flex-col items-center">
+                    <img src="Assets/thumbnail-3.png" alt="" class="w-64 h-32 rounded-xl">
+                    <h3 class="text-lg font-semibold pl-2">Visual Hook - Course Digital Marketing Eps.3</h3>
+                </div>
+                <div class="flex items-center gap-1 pl-2">
+                    <img src="Assets/profil_card.svg" alt="" class="w-6 h-6">
+                    <p class="text-xs ">Programmer_Handal</p>
+                </div>
+                <div class="flex items-center justify-between gap-1 pl-2">
+                    <div class="flex items-center gap-3">
+                        <img src="Assets/folder_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">20 Files</p>
+                        <img src="Assets/jam_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">5 Hours</p>
+                    </div>
+                    <div class="bg-red-600 w-8 h-6 rounded-md flex items-center justify-center">
+                        <p class="text-white text-xs font-semibold">FREE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-dark2 dark:text-white   rounded-xl w-72 h-72 shadow-md flex flex-col p-2 gap-2">
+                <div class="w-full flex flex-col items-center">
+                    <img src="Assets/thumbnail-4.png" alt="" class="w-64 h-32 rounded-xl">
+                    <h3 class="text-lg font-semibold pl-2">Layout - Grapich Design For Begginer</h3>
+                </div>
+                <div class="flex items-center gap-1 pl-2">
+                    <img src="Assets/profil_card.svg" alt="" class="w-6 h-6">
+                    <p class="text-xs ">Programmer_Handal</p>
+                </div>
+                <div class="flex items-center justify-between gap-1 pl-2">
+                    <div class="flex items-center gap-3">
+                        <img src="Assets/folder_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">20 Files</p>
+                        <img src="Assets/jam_card.svg" alt="" class="w-6 h-6 rounded-full">
+                        <p class="text-xs">5 Hours</p>
+                    </div>
+                    <div class="bg-red-600 w-8 h-6 rounded-md flex items-center justify-center">
+                        <p class="text-white text-xs font-semibold">FREE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <div class="w-48 h-16 bg-1 dark:bg-dark1 flex items-center justify-center rounded-lg mt-16">
+                <a href="" class="text-lg text-white font-bold">View All Courses →</a>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="pt-6 bg-2 dark:bg-dark3 text-white">
+        <div class="h-52 flex flex-row justify-between px-24 gap-48">
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold">Dive Into our Online  Courses and Ignite Your Learning</h2>
+            </div>
+            <div class="flex-1">
+                <div class="grid grid-cols-3">
+                    <div class="flex flex-col gap-1">
+                        <h4 class="font-semibold text-md mb-2">About Me</h4>
+                        <p class="text-sm">Short Profile</p>
+                        <p class="text-sm">Online Courses</p>
+                        <p class="text-sm">Monthly Discount</p>
+                        <p class="text-sm">Contact</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h4 class="font-semibold text-md mb-2">Navigation</h4>
+                        <p class="text-sm">Home</p>
+                        <p class="text-sm">Teacher</p>
+                        <p class="text-sm">Pages</p>
+                        <p class="text-sm">Blog</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h4 class="font-semibold text-md mb-2">More Information</h4>
+                        <p class="text-sm">Privacy and term</p>
+                        <p class="text-sm">Copyright</p>
+                        <p class="text-sm">Accessibility</p>
+                        <p class="text-sm">Sitemap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="bg-1 dark:bg-dark2">
+        <div class="max-w-full h-16 flex items-center justify-center">
+            <p class="text-white text-sm">&copy;2026 Online Course. All right reserved. Design By Andreas Tri Zidan Ramadhan</p>
+        </div>
+        </footer>
+    <script>
+    const halaman = document.documentElement;
+    const tombol = document.getElementById('theme');
+    const ikonBulan = document.getElementById('dark');
+    const ikonSurya = document.getElementById('light');
+    
+    tombol.onclick = function() {
+                
+        halaman.classList.toggle('dark');
+
+        ikonBulan.classList.toggle('hidden');
+        ikonSurya.classList.toggle('hidden');
+    };
+    </script>
+</body>
+</html>
+
+
+<!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
