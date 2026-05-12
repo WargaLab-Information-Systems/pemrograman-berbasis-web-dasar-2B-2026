@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Profil Interaktif Developer</title>
+    <style>
+        :root{
+            --accent:#2b8cff;
+            --muted:#6c7a89;
+            --bg-body:#f3f8ff;
+            --bg-card:#fbfdff; 
+            --card-border:#eef4ff;
+        }
+        body{
+            font-family:Segoe UI, Tahoma, Geneva, Verdana,sans-serif;
+            background:var(--bg-body);
+            margin:0;
+            padding:28px;
+            color:#222
+        }
+        .container{
+            max-width:860px;
+            margin:0 auto;
+            background:var(--bg-card);
+            padding:26px;
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(12,20,30,0.06);
+            border:1px 
+            solid var(--card-border)
+        }
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:14px
+        }
+        h1{
+            font-size:20px;
+            margin:0;
+            color:#243b55
+        }
+        .meta{
+            font-size:13px;
+            color:var(--muted)}
+        .profile{
+            display:grid;
+            grid-template-columns:1fr 220px;
+            gap:16px;
+            align-items:start
+        }
+        .card{
+            padding:14px;
+            border-radius:10px;
+            background:var(--bg-card);
+            border:1px solid var(--card-border)
+        }
+        .card h3{
+            margin:0 0 8px;
+            font-size:15px;
+            color:#243b55
+        }
+        .list-table{
+            width:100%;
+            border-collapse:separate;
+            border-spacing:0 8px
+        }
+        .list-table th{
+            text-align:left;
+            background:#1c3548;
+            color:#fff;padding:8px;
+            border-radius:6px
+        }
+        .list-table td{
+            padding:8px;
+            border-bottom:1px 
+            solid #f0f3f6
+        }
+        form{
+            margin-top:12px
+        }
+        .field{
+            margin-bottom:12px
+        }
+        label{
+            display:block;
+            font-weight:600;
+            margin-bottom:6px;
+            color:var(--muted)
+        }
+        input[type=text],
+        textarea,select{
+            width:100%;
+            padding:10px;
+            border:1px solid #e0e6ef;
+            border-radius:8px
+        }
+        .checks{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px
+        }
+        .checks label{
+            background:var(--bg-card);
+            padding:6px 8px;
+            border-radius:6px;
+            border:1px solid #e9eef8;
+            font-weight:500
+        }
+        .actions{
+            display:flex;
+            gap:10px
+        }
+        .btn{
+            background:var(--accent);
+            color:#fff;
+            padding:10px 14px;
+            border:0;
+            border-radius:8px;
+            cursor:pointer
+        }
+        .btn.secondary{
+            background:#eef4ff;
+            color:var(--accent)
+        }
+        .result{
+            margin-top:18px;
+            padding:14px;
+            border-radius:8px;
+            background:#1f323c;
+            border-left:4px solid var(--accent);
+            color:#e8eef5;
+        }
+        .result h4{
+            color:#fff;
+            margin-top:0;
+        }
+        .result h5{
+            color:#fff;
+        }
+        .result p{
+            color:#e8eef5;
+            line-height:1.6;
+        }
+        .result strong{
+            color:#b3d7ff;
+        }
+        .result ul{
+            color:#e8eef5;
+        }
+        .result li{
+            margin-bottom:6px;
+        }
+        .preview-box{
+            min-height:120px;
+            display:flex;
+            flex-direction:column;
+            gap:10px
+        }
+        .preview-empty{
+            color:#667188;
+            font-weight:500;
+        }
+        .preview-summary{
+            padding:10px 12px;
+            border:1px solid #d0e4ff;
+            border-radius:10px;
+            background:#f8fbff;
+            display:flex;
+            flex-direction:column;
+            gap:4px
+        }
+        .preview-summary strong{
+            color:#1a3a52;
+            font-size:14px;
+            font-weight:700;
+        }
+        .preview-summary span{
+            font-size:13px;
+            color:#4a5f7f;
+            font-weight:500;
+        }
+        .preview-badges{
+            display:flex;
+            flex-wrap:wrap;
+            gap:6px
+        }
+        .badges{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin-top:8px
+        }
+        .badge{
+            background:#e3f2ff;
+            color:#0052a3;
+            padding:6px 10px;
+            border-radius:999px;
+            font-weight:600;
+            border:1px solid #b8d9ff;
+        }
+        small.help{
+            display:block;
+            color:var(--muted);
+            margin-top:6px
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Profil Interaktif Developer Pemula</h1>
+        <div style="display:flex;gap:10px;align-items:center">
+            <div class="meta">Preview</div>
+        </div>
+    </header>
+
+    <div class="profile">
+        <div class="card">
+            <h3>Data Pribadi</h3>
+            <table class="list-table">
+                <tr><th>Nama</th><td>Eko Rismanto</td></tr>
+                <tr><th>ID</th><td>DEV-2025-001</td></tr>
+                <tr><th>Kota/Lahir</th><td>Banyuwangi, 01 Apr 2005</td></tr>
+                <tr><th>Email</th><td>eko.rismanto@gmail.com</td></tr>
+                <tr><th>WA</th><td>0812-4934-4301</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>Preview</h3>
+            <div id="preview" class="preview-box">
+                <div class="preview-empty">Isi form untuk melihat ringkasan di sini.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin:18px 0;border:none;border-top:1px solid #eef3fb">
+
+    <section class="card" aria-labelledby="formTitle">
+        <h3 id="formTitle">Input Data Keahlian</h3>
+        <form id="skillForm">
+            <div class="field">
+                <label for="frameworks">Framework / Tools (pisahkan dengan koma)</label>
+                <input id="frameworks" name="frameworks" type="text" placeholder="Contoh: React, Laravel, Tailwind">
+                <small class="help">Isi minimal 1 framework.</small>
+            </div>
+
+            <div class="field">
+                <label for="pengalaman">Cerita Singkat Pengalaman</label>
+                <textarea id="pengalaman" name="pengalaman" rows="4" placeholder="Tuliskan pengalaman singkat Anda"></textarea>
+            </div>
+
+            <div class="field">
+                <label>Tools Penunjang</label>
+                <div class="checks">
+                    <label><input type="checkbox" name="tools" value="VS Code"> VS Code</label>
+                    <label><input type="checkbox" name="tools" value="GitHub"> GitHub</label>
+                    <label><input type="checkbox" name="tools" value="Figma"> Figma</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Minat Bidang</label>
+                <div class="checks">
+                    <label><input type="radio" name="minat" value="Frontend"> Frontend</label>
+                    <label><input type="radio" name="minat" value="Backend"> Backend</label>
+                    <label><input type="radio" name="minat" value="Fullstack"> Fullstack</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="tingkat_skill">Tingkat Skill Coding</label>
+                <select id="tingkat_skill" name="tingkat_skill">
+                    <option value="">-- Pilih Tingkat --</option>
+                    <option>Dasar</option>
+                    <option>Cukup</option>
+                    <option>Profesional</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn">Proses & Tampilkan</button>
+                <button type="button" id="resetBtn" class="btn secondary">Reset</button>
+            </div>
+        </form>
+
+        <div id="resultArea" style="display:none" class="result" aria-live="polite"></div>
+    </section>
+
+</div>
+
+<script>
+document.getElementById('skillForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const frameworks = document.getElementById('frameworks').value.trim();
+    const pengalaman = document.getElementById('pengalaman').value.trim();
+    const tingkat = document.getElementById('tingkat_skill').value;
+    const minat = (document.querySelector('input[name="minat"]:checked')||{}).value || '';
+    const toolsEls = Array.from(document.querySelectorAll('input[name="tools"]:checked'));
+    const tools = toolsEls.map(i=>i.value);
+
+    if(!frameworks || !pengalaman || !minat || !tingkat){
+        alert('Mohon isi semua field yang wajib (frameworks, pengalaman, minat, tingkat).');
+        return;
+    }
+
+    const arr = frameworks.split(',').map(s=>s.trim()).filter(Boolean);
+
+    const preview = document.getElementById('preview');
+    preview.innerHTML =
+        '<div class="preview-summary">' +
+            '<strong>' + escapeHtml(minat) + '</strong>' +
+            '<span>Tingkat skill: ' + escapeHtml(tingkat) + '</span>' +
+        '</div>' +
+        '<div class="preview-badges">' +
+            arr.slice(0,4).map(x=>'<span class="badge">'+escapeHtml(x)+'</span>').join('') +
+        '</div>';
+
+    const resultArea = document.getElementById('resultArea');
+    let html = '<h4>Hasil Input Data</h4>';
+    html += '<p><strong>Minat:</strong> '+escapeHtml(minat)+'</p>';
+    html += '<p><strong>Tingkat Skill:</strong> '+escapeHtml(tingkat)+'</p>';
+    html += '<p><strong>Tools Penunjang:</strong> '+(tools.length? tools.map(escapeHtml).join(', ') : 'Tidak ada')+'</p>';
+    html += '<p><strong>Daftar Framework:</strong></p><ul>' + arr.map(x=>'<li>'+escapeHtml(x)+'</li>').join('') + '</ul>';
+    if(arr.length > 2) {
+        html += '<p style="color:#10b981;font-weight:600;padding:10px;background:#f0fdf4;border-radius:8px"><strong>✓ Skill Anda cukup luas di bidang development!</strong></p>';
+    } else {
+        html += '<p style="color:#f97316;font-weight:600;padding:10px;background:#fffbeb;border-radius:8px"><strong>⚠ Tingkatkan keahlian Anda dengan menambah framework lain.</strong></p>';
+    }
+    html += '<h5>Pengalaman:</h5><p>'+nl2br(escapeHtml(pengalaman))+'</p>';
+
+    resultArea.innerHTML = html;
+    resultArea.style.display = 'block';
+    resultArea.scrollIntoView({behavior:'smooth'});
+});
+
+document.getElementById('resetBtn').addEventListener('click', function(){
+    document.getElementById('skillForm').reset();
+    document.getElementById('resultArea').style.display = 'none';
+    document.getElementById('preview').innerHTML = '<div class="preview-empty">Isi form untuk melihat ringkasan di sini.</div>';
+});
+
+function escapeHtml(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function nl2br(str){
+    return str.replace(/\n/g,'<br>');
+}
+</script>
+
+</body>
+</html>
