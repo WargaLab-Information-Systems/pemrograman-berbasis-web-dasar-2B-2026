@@ -1,0 +1,53 @@
+<?php
+$artikel = [
+    "html" => [
+        "judul" => "Belajar HTML Pertama Kali",
+        "tanggal" => "2026",
+        "isi" => "Saya mulai belajar HTML dari dasar dan membuat bio data diri."
+    ],
+    "error" => [
+        "judul" => "Error Pertama",
+        "tanggal" => "2026",
+        "isi" => "Saya sering mengalami error dan belajar memperbaikinya."
+    ],
+    "project" => [
+        "judul" => "Project Pertama",
+        "tanggal" => "2026",
+        "isi" => "Saya berhasil membuat website pertama saya."
+    ]
+];
+
+$quotes = [
+    "selagi bernafas lamjut ngoding!!",
+    "kegagalan adalah pematah dan penyemangat untuk menjadi kuat!!.",
+    "Latihan membuatmu mahir."
+];
+
+$randomQuote = $quotes[array_rand($quotes)];
+?>
+
+<h2>Blog Developer</h2>
+
+<ul>
+<?php foreach ($artikel as $key => $a): ?>
+    <li><a href="?id=<?= $key ?>"><?= $a['judul'] ?></a></li>
+<?php endforeach; ?>
+</ul>
+
+<?php
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $data = $artikel[$id];
+
+    echo "<h3>{$data['judul']}</h3>";
+    echo "<p>Tanggal: {$data['tanggal']}</p>";
+    echo "<p>{$data['isi']}</p>";
+    echo "<img src='pertama.png' width='200'><br>";
+    echo "<blockquote>$randomQuote</blockquote>";
+    echo "<a href='https://www.w3schools.com'>Referensi Belajar</a>";
+}
+?>
+
+<br>
+<a href="soal2modul5.php">⬅ Kembali ke Timeline</a> <br>
+<a href="soal1modul5.php">⬅ Kembali ke Profil</a>
