@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript 3 mode</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"rel="stylesheet"/>
+
+    <style>
+      :root {
+        --primary: #8a38f5;
+        --secondary: #ff9335;
+        --info: #ffd47e;
+        --gradient: linear-gradient(90deg, #ffd47e, #ff9335);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .judul {
+        color: var(--primary);
+      }
+      .menu {
+        color: var(--primary);
+      }
+      .navbar {
+        background: white;
+      }
+      .nav-link {
+        cursor: pointer;
+        margin: 0 15px;
+      }
+      .nav-link.active {
+        color: var(--secondary) !important;
+        font-weight: bold;
+      }
+      .btn-orange {
+        background: var(--secondary);
+        color: white;
+        border-radius: 10px;
+      }
+
+      .hero {
+        padding: 120px 0;
+      }
+      .hero span {
+        color: var(--primary);
+      }
+      .btn-main {
+        background: var(--secondary);
+        color: white;
+        border-radius: 10px;
+      }
+      .services {
+        padding: 80px 0;
+      }
+      .service-card {
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 20px var(--primary);
+        text-align: center;
+      }
+      .service-card button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+      }
+
+      .yellow {
+        background: var(--gradient);
+        padding: 80px 0;
+      }
+
+      .agency {
+        padding: 80px 0;
+      }
+
+      .testimonial {
+        padding: 80px 0;
+      }
+      .testi-card {
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px var(--primary);
+      }
+
+      .cta {
+        background: var(--secondary);
+        padding: 30px;
+        border-radius: 15px;
+        color: white;
+      }
+
+      .footer {
+        background: var(--gradient);
+        padding: 50px 0;
+      }
+      .footer h6 {
+        margin-bottom: 15px;
+      }
+
+      .footer p {
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+
+      .footer p:hover {
+        color: var(--primary);
+      }
+      body.dark-mode {
+        background: #121212;
+        color: white;
+      }
+
+      body.dark-mode .navbar {
+        background: #1e1e1e !important;
+      }
+
+      body.blue-mode {
+        background: #e7f0ff;
+      }
+
+      .theme-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
+      <div class="container">
+        <img src="ASSET (1)\UTS\Logo.png" width="50" class="m-3" />
+        <h4 class="fw-bold judul">BzMe</h4>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu">
+          ☰
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto fw-bold">
+            <li>
+              <span class="nav-link active menu" data-target="home">Home</span>
+            </li>
+            <li>
+              <span class="nav-link menu" data-target="about">About</span>
+            </li>
+            <li>
+              <span class="nav-link menu" data-target="services">Services</span>
+            </li>
+            <li>
+              <span class="nav-link menu" data-target="contact">Contact</span>
+            </li>
+            <li><span class="nav-link menu" data-target="blog">Blog</span></li>
+          </ul>
+          
+            <div class="d-flex align-items-center gap-2">
+              <button onclick="setTheme('light')" class="btn btn-light">☀</button>
+              <button onclick="setTheme('dark')" class="btn btn-dark text-white">☾</button>
+              <button onclick="setTheme('blue')" class="btn btn-primary">🔵</button>
+              <button class="btn btn-orange fw-bold">Sign Up</button>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="fw-bold">
+            We Create <br /><span>Solutions</span> <br />
+            For Your Business
+          </h1>
+          <p>
+            We provide intelligent solutions to <br />
+            optimize efficiency and accelerate the growth of <br />
+            your business.
+          </p>
+          <button class="btn btn-main mt-3">Get Started</button>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="ASSET (1)\UTS\1.png" width="500" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services text-center">
+      <div class="container">
+        <h2 class="fw-bold">
+          We Provide The Best
+          <span style="color: var(--primary)">Services</span>
+        </h2>
+        <p>
+          we deliver high-quality technology services specally designed to
+          enhance your <br />business productivity and seclabilyty in a way
+        </p>
+
+        <div class="row mt-5">
+          <div class="col-md-3">
+            <div class="service-card">
+              
+              <h5 class="fw-bold" style="text-align: left">Seo/Sem</h5>
+              <p style="text-align: left">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button class="px-3 py-2 mt-2 fw-bold" style="color: var(--info)">
+                Click Here
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service-card">
+              <h5 class="fw-bold" style="text-align: left">Viral Campaign</h5>
+              <p style="text-align: left">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button class="px-3 py-2 mt-2 fw-bold" style="color: var(--info)">
+                Click Here
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service-card">
+              
+              <h5 class="fw-bold" style="text-align: left">Marketing</h5>
+              <p style="text-align: left">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button class="px-3 py-2 mt-2 fw-bold" style="color: var(--info)">
+                Click Here
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service-card">
+              <h5 class="fw-bold" style="text-align: left">Others</h5>
+              <p style="text-align: left">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button class="px-3 py-2 mt-2 fw-bold" style="color: var(--info)">
+                Click Here
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="yellow">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center">
+            <img src="ASSET (1)\UTS\2.png" width="300" />
+          </div>
+          <div class="col-md-6">
+            <h2 class="fw-bold">
+              Simple
+              <span style="color: var(--primary)">Solutions!</span>
+            </h2>
+            <p>
+              We understand that no two are alike.that why we take the time to
+              truly understrand your unigue goalyour goals,challages,and vision
+              and challenges.
+            </p>
+            <button class="btn btn-main me-2 px-5 fw-bold">Get Started</button>
+            <button class="btn btn-outline-dark px-5 fw-bold">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="agency container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="fw-bold">
+            Our <span style="color: var(--primary)">Agency</span>
+          </h2>
+          <p>
+            We believe in the power of data. our analytics-driven approach
+            allows us to make informed let's turn your data into actionable
+            insights adored solution for your business
+          </p>
+          <button class="btn btn-main px-5 fw-bold">Read More</button>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="ASSET (1)\UTS\3.png" width="300" />
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="testimonial text-center">
+      <div class="container">
+        <h2 class="fw-bold">
+          What <span style="color: var(--secondary)">Clients</span> Say!
+        </h2>
+        <p align-left>
+          see how our digitak marketing agency helped clients achieve their
+          goals
+        </p>
+
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="testi-card" style="text-align: left">
+              <h5 class="fw-bold" style="color: var(--secondary)">
+                Johnny Suh
+              </h5>
+              <p>Executive CEO</p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                inventore accusamus atque aspernatur alias culpa
+              </p>
+              ⭐⭐⭐⭐
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testi-card" style="text-align: left">
+              <h5 class="fw-bold" style="color: var(--secondary)">
+                Nashley Juan
+              </h5>
+              <p>Executive CEO</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                inventore accusamus atque aspernatur alias culpa
+              </p>
+
+              ⭐⭐⭐⭐
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testi-card" style="text-align: left">
+              <h5 class="fw-bold" style="color: var(--secondary)">Mark Z.</h5>
+              <p>Executive CEO</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                inventore accusamus atque aspernatur alias culpa
+              </p>
+
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+        </div>
+
+        <div class="cta mt-5 d-flex justify-content-between align-items-center">
+          <h5 class="mb-0 fw-bold">Ready To Get Started?</h5>
+          <button class="btn btn-outline-light fw-bold px-5 text-white">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="footer">
+      <div class="container">
+        <div class="row align-items-start text-center text-md-start">
+          <div class="col-md-3 mb-4">
+            <div
+              class="d-flex align-items-center mt-5 justify-content-center justify-content-md-start"
+            >
+              <img src="ASSET (1)\UTS\Logo.png" width="40" class="me-2" />
+              <h5 class="fw-bold mb-0" style="color: var(--primary)">BzMe</h5>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold">Company</h6>
+            <p class="mb-1">About</p>
+            <p class="mb-1">Contact</p>
+            <p class="mb-1">Careers</p>
+            <p class="mb-1">Team</p>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold">Designs</h6>
+            <p class="mb-1">UI & UX Designer</p>
+            <p class="mb-1">Web Development</p>
+            <p class="mb-1">Digital Marketing</p>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold">Support</h6>
+            <p class="mb-1">Privacy Policy</p>
+            <p class="mb-1">Terms</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          const target = document.getElementById(this.dataset.target);
+
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: "smooth",
+          });
+
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((n) => n.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+
+    <script>
+      function setTheme(mode) {
+        document.body.classList.remove("dark-mode", "blue-mode");
+
+        if (mode === "dark") {
+          document.body.classList.add("dark-mode");
+        } else if (mode === "blue") {
+          document.body.classList.add("blue-mode");
+        }
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
