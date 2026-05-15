@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Course</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        [data-theme="light"] {
+            --bg: #f5f7fb;
+            --bg-hero: #eef2fb;
+            --bg-feat: #eef2fb;
+            --bg-courses: #f8faff;
+            --header-bg: #ffffff;
+            --card-bg: #ffffff;
+            --icon-bg: #eef2fb;
+            --text: #374151;
+            --heading: #323232;
+            --accent: #3852B4;
+            --nav-text: #000000;
+            --feat-text: #3b4da8;
+            --card-heading: #1f2937;
+            --card-meta: #6b7280;
+            --border: #f3f4f6;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f1117;
+            --bg-hero: #1a1d2e;
+            --bg-feat: #131520;
+            --bg-courses: #0d0f1a;
+            --header-bg: #12141f;
+            --card-bg: #1e2235;
+            --icon-bg: #2d3348;
+            --text: #c9d3e8;
+            --heading: #e8eeff;
+            --accent: #a5b4fc;
+            --nav-text: #e2e8f0;
+            --feat-text: #818cf8;
+            --card-heading: #f1f5f9;
+            --card-meta: #94a3b8;
+            --border: #2d3348;
+        }
+
+        [data-theme="blue"] {
+            --bg: #0e2864;
+            --bg-hero: #0c2359;
+            --bg-feat: #0f316a;
+            --bg-courses: #0e2662;
+            --header-bg: #081228;
+            --card-bg: #0d1d3d;
+            --icon-bg: #122448;
+            --text: #93c5fd;
+            --heading: #e0f2fe;
+            --accent: #60a5fa;
+            --nav-text: #bfdbfe;
+            --feat-text: #60a5fa;
+            --card-heading: #e0f2fe;
+            --card-meta: #5b8dd9;
+            --border: #1a3060;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            transition: background .3s, color .3s;
+        }
+
+        header {
+            background: var(--header-bg);
+            transition: background .3s;
+        }
+
+        .theme-pills {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--icon-bg);
+            border-radius: 99px;
+            padding: 3px 5px;
+            border: 1px solid var(--border);
+            transition: background .3s, border-color .3s;
+        }
+
+        .t-pill {
+            border: none;
+            background: transparent;
+            border-radius: 99px;
+            padding: 4px 10px;
+            font-size: .7rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--feat-text);
+            transition: all .2s;
+            font-family: inherit;
+        }
+
+        .t-pill.active {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .t-pill:not(.active):hover {
+            opacity: .7;
+        }
+
+        .ham {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .ham span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--nav-text);
+            border-radius: 2px;
+            transition: background .3s;
+        }
+
+        .mob-menu {
+            display: none;
+            flex-direction: column;
+            background: var(--header-bg);
+            border-top: 1px solid var(--border);
+            padding: 1rem 1.5rem 1.5rem;
+            transition: background .3s;
+        }
+
+        .mob-menu.open {
+            display: flex;
+        }
+
+        .mob-menu a {
+            font-size: .85rem;
+            font-weight: 700;
+            color: var(--nav-text);
+            padding: .65rem 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+        }
+
+        .mob-menu a:last-of-type {
+            border: none;
+        }
+
+        .mob-theme {
+            display: flex;
+            gap: 6px;
+            margin-top: .75rem;
+        }
+
+        .mob-theme .t-pill {
+            flex: 1;
+            border: 1px solid var(--border);
+            background: var(--icon-bg);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .mob-theme .t-pill.active {
+            border-color: transparent;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all .8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media(max-width:768px) {
+
+            .nav-links-desktop,
+            .theme-pills,
+            .btn-contact-desk {
+                display: none !important;
+            }
+
+            .ham {
+                display: flex;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* FIX GAMBAR */
+            .hero-img-col,
+            .about-img-col {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .hero-img-col img,
+            .about-img-col img {
+                max-width: 80%;
+                height: auto;
+            }
+
+            .cat-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media(max-width:480px) {
+            .course-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+
+    <header class="shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+            <nav class="nav-links-desktop flex gap-10 text-sm font-bold">
+                <a href="#" style="color:var(--accent)">HOME</a>
+                <a href="#" style="color:var(--nav-text)">COURSES</a>
+                <a href="#" style="color:var(--nav-text)">TEACHERS</a>
+                <a href="#" style="color:var(--nav-text)">PAGES</a>
+                <a href="#" style="color:var(--nav-text)">BLOG</a>
+                <a href="#" style="color:var(--nav-text)">CONTACT</a>
+            </nav>
+
+            <div class="theme-pills">
+                <button class="t-pill active" data-t="light">☀️ Light</button>
+                <button class="t-pill" data-t="dark">🌑 Dark</button>
+                <button class="t-pill" data-t="blue">🌩️ Blue</button>
+            </div>
+
+            <button
+                class="btn-contact-desk bg-[#3852B4] text-white px-4 py-2 rounded-md text-sm font-semibold flex items-center gap-2"
+                id="contactBtn">
+                ➜ CONTACT US
+            </button>
+
+            <button class="ham" id="ham"><span></span><span></span><span></span></button>
+        </div>
+
+        <div class="mob-menu" id="mobMenu">
+            <a href="#">HOME</a>
+            <a href="#">COURSES</a>
+            <a href="#">TEACHERS</a>
+            <a href="#">PAGES</a>
+            <a href="#">BLOG</a>
+            <a href="#">CONTACT</a>
+            <div class="mob-theme">
+                <button class="t-pill active" data-t="light">☀️ Light</button>
+                <button class="t-pill" data-t="dark">🌑 Dark</button>
+                <button class="t-pill" data-t="blue">🌩️ Blue</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-16 overflow-hidden reveal" style="background-color:var(--bg-hero)">
+        <div class="max-w-7xl mx-auto hero-grid grid grid-cols-1 md:grid-cols-2 items-end px-6">
+
+            <div class="self-center pb-16">
+                <p class="text-sm font-bold mb-3 uppercase" style="color:var(--accent)">E-LEARNING PLATFORM</p>
+                <h1 class="text-5xl font-bold leading-tight mb-2" style="color:var(--accent)">
+                    Online Course Education
+                </h1>
+                <p class="text-4xl font-sans font-semibold mb-6" style="color:var(--heading)">Feels Like Real Classroom
+                </p>
+
+                <div class="flex flex-wrap gap-8 mb-8 text-sm font-semibold font-sans" style="color:var(--heading)">
+                    <div class="flex items-center gap-2"><img src="UTS/icon_checklist.svg" alt=""><span>Get
+                            Certificate</span></div>
+                    <div class="flex items-center gap-2"><img src="UTS/icon_checklist.svg" alt=""><span>Gain Job Ready
+                            Skill</span></div>
+                    <div class="flex items-center gap-2"><img src="UTS/icon_checklist.svg" alt=""><span>Great
+                            Life</span></div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button
+                        class="bg-[#3852B4] text-white px-6 py-3 rounded-md text-sm font-bold flex items-center gap-2">GET
+                        STARTED <span>➜</span></button>
+                    <button
+                        class="bg-[#F08D39] text-white px-6 py-3 rounded-md text-sm font-bold flex items-center gap-2">GET
+                        COURSE <span>➜</span></button>
+                </div>
+            </div>
+
+            <div class="hero-img-col flex justify-center">
+                <img src="UTS/gambar_orang.png"
+                    class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain mx-auto mb-0 md:-mb-14"
+                    alt="Person Image" id="heroImg">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#5E7AC4] text-white overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto about-grid grid grid-cols-2 items-center px-4 py-16 gap-8">
+            <div class="about-img-col">
+                <img src="UTS/gambar_course.png" class="w-full h-auto object-contain" alt="Course Image">
+            </div>
+            <div class="max-w-xl">
+                <p class="text-lg font-bold mb-2">GET TO KNOW ABOUT US</p>
+                <h2 class="text-4xl font-bold leading-snug mb-4">
+                    Transform your future with skills that matter. Start learning today, lead tomorrow.
+                </h2>
+                <p class="text-lg font-bold mb-6">Can helping you build in-demand skills quickly and advance your career
+                    in an ever-changing job market.</p>
+                <button
+                    class="bg-[#F08D39] px-5 py-4 rounded-md text-sm font-semibold hover:bg-orange-600 transition">About
+                    More →</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 reveal" style="background-color:var(--bg-feat)">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-12 text-sm font-medium px-6"
+            style="color:var(--feat-text)">
+            <div class="flex items-center gap-2"><img src="UTS/icon_folder.svg" class="w-5 h-5" alt=""><span>20k+ Online
+                    Course</span></div>
+            <div class="flex items-center gap-2"><img src="UTS/icon_jam.svg" class="w-5 h-5" alt=""><span>Lifetime
+                    Access</span></div>
+            <div class="flex items-center gap-2"><img src="UTS/icon_uang.svg" class="w-5 h-5" alt=""><span>Value For
+                    Money</span></div>
+            <div class="flex items-center gap-2"><img src="UTS/icon_headphone.svg" class="w-5 h-5" alt=""><span>Lifetime
+                    Support</span></div>
+            <div class="flex items-center gap-2"><img src="UTS/people_icon.svg" class="w-6 h-6" alt=""><span>Community
+                    Support</span></div>
+            <div class="flex items-center gap-2"><img src="UTS/icon_download.svg" class="w-6 h-6" alt=""><span>Free
+                    Download Course</span></div>
+        </div>
+    </section>
+
+    <section class="py-28 reveal" style="background-color:var(--bg-courses)">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="text-center text-4xl font-bold mb-10 tracking-wide" style="color:var(--heading)">OUR POPULAR
+                COURSE</h2>
+
+            <div class="cat-grid grid grid-cols-4 gap-4 mb-12">
+                <div class="p-4 rounded-xl shadow-sm border flex items-center gap-4"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <div class="p-3 rounded-lg" style="background:var(--icon-bg)"><img src="UTS/icon_toa.svg"
+                            class="w-6 h-6" alt=""></div>
+                    <div>
+                        <p class="font-bold text-sm" style="color:var(--card-heading)">Digital Marketing</p>
+                        <p class="text-xs cat-count" style="color:var(--card-meta)">354 Courses</p>
+                    </div>
+                </div>
+                <div class="p-4 rounded-xl shadow-sm border flex items-center gap-4"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <div class="p-3 rounded-lg" style="background:var(--icon-bg)"><img src="UTS/icon_pallet.svg"
+                            class="w-6 h-6" alt=""></div>
+                    <div>
+                        <p class="font-bold text-sm" style="color:var(--card-heading)">Graphic Design</p>
+                        <p class="text-xs cat-count" style="color:var(--card-meta)">553 Courses</p>
+                    </div>
+                </div>
+                <div class="p-4 rounded-xl shadow-sm border flex items-center gap-4"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <div class="p-3 rounded-lg" style="background:var(--icon-bg)"><img src="UTS/icon_hp.svg"
+                            class="w-6 h-6" alt=""></div>
+                    <div>
+                        <p class="font-bold text-sm" style="color:var(--card-heading)">UI/UX Design</p>
+                        <p class="text-xs cat-count" style="color:var(--card-meta)">175 Courses</p>
+                    </div>
+                </div>
+                <div class="p-4 rounded-xl shadow-sm border flex items-center gap-4"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <div class="p-3 rounded-lg" style="background:var(--icon-bg)"><img src="UTS/icon_webpage.svg"
+                            class="w-6 h-6" alt=""></div>
+                    <div>
+                        <p class="font-bold text-sm" style="color:var(--card-heading)">Web Development</p>
+                        <p class="text-xs cat-count" style="color:var(--card-meta)">211 Courses</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-grid grid grid-cols-4 gap-8 mb-14">
+                <div class="rounded-2xl shadow-md border overflow-hidden p-3 flex flex-col justify-between"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <img src="UTS/thumbnail-1.png" class="h-44 w-full object-cover rounded-xl mb-4" alt="">
+                    <h3 class="text-base font-bold mb-2 leading-snug" style="color:var(--card-heading)">Learn Figma -
+                        UI/UX Design Fundamental</h3>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2"><img src="UTS/profil_card.svg" class="w-6 h-6"
+                                alt=""><span class="text-[10px]" style="color:var(--card-meta)">Programmer_Handal</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3 text-[10px]" style="color:var(--card-meta)">
+                                <span class="flex items-center gap-1"><img src="UTS/folder_card.svg" alt="">20
+                                    Files</span>
+                                <span class="flex items-center gap-1"><img src="UTS/jam_card.svg" alt="">5 Hours</span>
+                            </div>
+                            <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl shadow-md border overflow-hidden p-3 flex flex-col justify-between"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <img src="UTS/thumbnail-2.png" class="h-44 w-full object-cover rounded-xl mb-4" alt="">
+                    <h3 class="text-base font-bold mb-2 leading-snug" style="color:var(--card-heading)">Python
+                        Fundamental - For Algoritma Pemrograman</h3>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2"><img src="UTS/profil_card.svg" class="w-6 h-6"
+                                alt=""><span class="text-[10px]" style="color:var(--card-meta)">Programmer_Handal</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3 text-[10px]" style="color:var(--card-meta)">
+                                <span class="flex items-center gap-1"><img src="UTS/folder_card.svg" alt="">20
+                                    Files</span>
+                                <span class="flex items-center gap-1"><img src="UTS/jam_card.svg" alt="">5 Hours</span>
+                            </div>
+                            <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl shadow-md border overflow-hidden p-3 flex flex-col justify-between"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <img src="UTS/thumbnail-3.png" class="h-44 w-full object-cover rounded-xl mb-4" alt="">
+                    <h3 class="text-base font-bold mb-2 leading-snug" style="color:var(--card-heading)">Visual Hook -
+                        Course Digital Marketing Eps. 3</h3>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2"><img src="UTS/profil_card.svg" class="w-6 h-6"
+                                alt=""><span class="text-[10px]" style="color:var(--card-meta)">Programmer_Handal</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3 text-[10px]" style="color:var(--card-meta)">
+                                <span class="flex items-center gap-1"><img src="UTS/folder_card.svg" alt="">20
+                                    Files</span>
+                                <span class="flex items-center gap-1"><img src="UTS/jam_card.svg" alt="">5 Hours</span>
+                            </div>
+                            <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl shadow-md border overflow-hidden p-3 flex flex-col justify-between"
+                    style="background:var(--card-bg);border-color:var(--border)">
+                    <img src="UTS/thumbnail-4.png" class="h-44 w-full object-cover rounded-xl mb-4" alt="">
+                    <h3 class="text-base font-bold mb-2 leading-snug" style="color:var(--card-heading)">Layout - Graphic
+                        Design For Beginner</h3>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2"><img src="UTS/profil_card.svg" class="w-6 h-6"
+                                alt=""><span class="text-[10px]" style="color:var(--card-meta)">Programmer_Handal</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3 text-[10px]" style="color:var(--card-meta)">
+                                <span class="flex items-center gap-1"><img src="UTS/folder_card.svg" alt="">20
+                                    Files</span>
+                                <span class="flex items-center gap-1"><img src="UTS/jam_card.svg" alt="">5 Hours</span>
+                            </div>
+                            <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">FREE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="bg-[#3852B4] text-white px-8 py-4 rounded-lg text-sm font-semibold hover:bg-blue-800 transition shadow-lg">View
+                    All Course →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#5E7AC4] text-white">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="footer-grid grid grid-cols-12 gap-8 items-start">
+                <div class="col-span-6">
+                    <h3 class="text-2xl font-semibold leading-tight">Dive Into our Online Courses<br>and Ignite Your
+                        Learning</h3>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="font-semibold text-lg mb-3">About Me</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Short Profile</li>
+                        <li>Online Course</li>
+                        <li>Monthly Discount</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="font-semibold text-lg mb-3">Navigation</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Home</li>
+                        <li>Teachers</li>
+                        <li>Pages</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="font-semibold text-lg mb-3">More Information</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Privacy and terms</li>
+                        <li>Copyright</li>
+                        <li>Accessibility</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#3852B4] py-6 text-center text-xs opacity-90">
+            @2026 Online Course. All right reserved. Designed By Dhani Kusuma Prasetyo
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // THEME
+            const html = document.documentElement;
+            function setTheme(t) {
+                html.setAttribute('data-theme', t);
+                document.querySelectorAll('.t-pill').forEach(b => b.classList.toggle('active', b.dataset.t === t));
+            }
+            document.querySelectorAll('.t-pill').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
+
+            // HAMBURGER
+            const ham = document.getElementById('ham');
+            const mob = document.getElementById('mobMenu');
+            ham.addEventListener('click', () => mob.classList.toggle('open'));
+            mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mob.classList.remove('open')));
+
+            // SCROLL REVEAL
+            const ro = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); ro.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+            // COUNTER
+            document.querySelectorAll('.cat-count').forEach(el => {
+                const target = parseInt(el.innerText);
+                if (isNaN(target)) return;
+                const co = new IntersectionObserver(([e]) => {
+                    if (e.isIntersecting) {
+                        let c = 0;
+                        const tick = () => { c = Math.min(c + target / 80, target); el.innerText = Math.ceil(c) + ' Courses'; if (c < target) setTimeout(tick, 12); };
+                        tick(); co.disconnect();
+                    }
+                });
+                co.observe(el);
+            });
+
+            // HOVER EFFECTS
+            document.querySelectorAll('button, .course-grid > div, .cat-grid > div').forEach(el => {
+                el.style.transition = 'all .3s ease';
+                el.addEventListener('mouseenter', () => { if (!el.classList.contains('t-pill') && !el.classList.contains('ham')) el.style.transform = 'translateY(-4px) scale(1.02)'; });
+                el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+            });
+
+            // NAV SMOOTH SCROLL
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    const t = link.innerText.toLowerCase();
+                    window.scrollTo({ top: t === 'contact' ? document.body.scrollHeight : t === 'courses' ? document.querySelectorAll('section')[3]?.offsetTop - 80 : 0, behavior: 'smooth' });
+                    document.querySelectorAll('nav a').forEach(a => a.style.color = '');
+                    link.style.color = 'var(--accent)';
+                });
+            });
+
+            // CONTACT BUTTON
+            document.getElementById('contactBtn').addEventListener('click', () => alert('Terima kasih! Tim kami akan segera menghubungi Anda.'));
+
+            // PARALLAX HERO
+            const heroImg = document.getElementById('heroImg');
+            if (heroImg) window.addEventListener('mousemove', e => {
+                heroImg.style.transform = `translate(${(e.clientX / window.innerWidth - .5) * 12}px, ${(e.clientY / window.innerHeight - .5) * 7}px)`;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

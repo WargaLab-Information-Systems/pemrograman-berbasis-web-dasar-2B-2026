@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+
+  html {
+  scroll-behavior: smooth;
+  }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+
+  <title>Portfolio Rafael</title>
+</head>
+
+<body class="bg-teal-950 text-white font-sans scroll-smooth">
+
+ <nav class="flex justify-between items-center px-6 py-4 bg-teal-900 shadow-lg">
+  <img src="gambar/images__2_-removebg-preview.png" alt="Logo Rafael" class="h-10 md:h-12 object-contain">
+
+  <div class="flex space-x-3 md:space-x-6 text-white text-sm md:text-base">
+    <a href="#about" class="hover:text-blue-400 transition">About</a>
+    <a href="#skill" class="hover:text-blue-400 transition">Skill</a>
+    <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+    <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+  </div>
+
+</nav>
+
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 gap-10"
+    data-aos="fade-up">
+
+    <div class="flex justify-center">
+      <img src="gambar/WhatsApp Image 2026-04-13 at 10.55.26.jpeg" alt="Rafael"
+        class="w-60 h-60 object-cover rounded-full shadow-lg border-4 border-blue-400"
+        data-aos="zoom-in">
+    </div>
+
+    <div class="text-center md:text-left max-w-lg" data-aos="fade-right">
+      <h2 class="text-4xl font-bold mb-4">
+        Halo, Saya <span class="text-blue-400">Rafael</span>
+      </h2>
+      <p class="text-gray-300 mb-4">
+        Saya adalah individu yang memiliki kemampuan dalam Microsoft Office serta 
+        memiliki pengalaman sebagai crew outlet dan pramuniaga.
+      </p>
+
+      <a href="#contact"
+        class="inline-block bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-lg transition">
+        Hubungi Saya
+      </a>
+    </div>
+
+  </section>
+
+  <section id="about" class="px-6 py-16 bg-teal-800 text-center"
+    data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-blue-400">Tentang Saya</h2>
+    <p class="max-w-2xl mx-auto text-gray-300">
+      Nama saya Rafael Merdeka Putra Priadias. Saya memiliki kemampuan dalam bidang 
+      administrasi seperti Microsoft Office dan terbiasa bekerja dalam tim. Saya juga 
+      memiliki pengalaman kerja sebagai crew outlet dan pramuniaga.
+    </p>
+  </section>
+
+  <section id="skill" class="px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-10 text-blue-400">Keahlian</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+
+      <div class="bg-teal-800 p-6 rounded-lg shadow-lg hover:scale-105 transition"
+        data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-2">Microsoft Office</h3>
+        <p class="text-gray-400">Word, Excel, PowerPoint</p>
+      </div>
+
+      <div class="bg-teal-800 p-6 rounded-lg shadow-lg hover:scale-105 transition"
+        data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold mb-2">Komunikasi</h3>
+        <p class="text-gray-400">Public Speaking & Teamwork</p>
+      </div>
+
+      <div class="bg-teal-800 p-6 rounded-lg shadow-lg hover:scale-105 transition"
+        data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold mb-2">Pelayanan</h3>
+        <p class="text-gray-400">Customer Service & Sales</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experience" class="px-6 py-16 bg-teal-850">
+    <h2 class="text-3xl font-bold text-center mb-10 text-blue-400">Pengalaman</h2>
+
+    <div class="flex flex-col md:flex-row gap-6 justify-center">
+
+      <div class="bg-teal-800 p-6 rounded-lg shadow-lg w-full md:w-1/3"
+        data-aos="fade-right">
+        <h3 class="text-xl font-semibold mb-2">Crew Outlet</h3>
+        <p class="text-gray-400">
+          Bertanggung jawab dalam operasional outlet, melayani pelanggan,
+          dan menjaga kualitas pelayanan.
+        </p>
+      </div>
+
+      <div class="bg-teal-800 p-6 rounded-lg shadow-lg w-full md:w-1/3"
+        data-aos="fade-left">
+        <h3 class="text-xl font-semibold mb-2">Pramuniaga</h3>
+        <p class="text-gray-400">
+          Melayani pelanggan, membantu penjualan produk,
+          serta menjaga kerapihan display barang.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="px-6 py-16 text-center"
+    data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-blue-400">Kontak</h2>
+
+    <div class="space-y-3 text-gray-300">
+      <p>Email: rafaelpriadias25@gmail.com</p>
+      <p>WhatsApp: 085747848239</p>
+    </div>
+
+    <form class="mt-8 max-w-md mx-auto space-y-4"
+      data-aos="zoom-in">
+      <input type="text" placeholder="Nama"
+        class="w-full p-2 rounded bg-gray-800 border border-gray-400 focus:outline-none">
+
+      <input type="email" placeholder="Email"
+        class="w-full p-2 rounded bg-gray-800 border border-gray-400 focus:outline-none">
+
+      <textarea placeholder="Pesan"
+        class="w-full p-2 rounded bg-gray-800 border border-gray-400 focus:outline-none"></textarea>
+
+      <button class="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-lg w-full">
+        Kirim Pesan
+      </button>
+    </form>
+
+  </section>
+
+  <footer class="text-center py-4 bg-gray-800 text-gray-400">
+    © 2026 Rafael Merdeka Putra Priadias
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>
