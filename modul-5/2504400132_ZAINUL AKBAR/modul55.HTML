@@ -1,0 +1,48 @@
+<?php
+$timeline = [
+    ["tahun" => "2025", "kegiatan" => "Masuk Kuliah"],
+    ["tahun" => "2025", "kegiatan" => "ospek kuliah"],
+    ["tahun" => "2025", "kegiatan" => "Belajar phyton dulu"],
+    ["tahun" => "2026", "kegiatan" => "Website Pertama"],
+    ["tahun" => "2026", "kegiatan" => "Belajar html dan css"]
+];
+
+function highlight($tahun) {
+    if ($tahun == "2024") {
+        return "<b style='color:red;'>$tahun</b>";
+    }
+    return $tahun;
+}
+?>
+
+<h2>Timeline Belajar Coding</h2>
+
+<ul>
+<?php foreach ($timeline as $t): ?>
+    <li>
+        <?= highlight($t['tahun']); ?> - <?= $t['kegiatan']; ?>
+    </li>
+<?php endforeach; ?>
+</ul>
+
+<br>
+<a href="soal1modul5.php">⬅ Kembali ke Profil</a> |<br>
+<a href="soal3modul5.php">➡ Ke Blog</a>
+
+<?php
+$nama_array = array("NilaiA", "NilaiB", "NilaiC");
+$hobi = ["Membaca", "Coding", "Traveling"];
+?>
+
+<?php
+$nama_array = array(
+    "index0" => "nilai 0",
+    "index1" => "nilai 1"
+);
+?>
+
+<?php
+function hitung($panjang, $lebar) {
+    return $panjang + $lebar;
+}
+echo hitung(panjang : 15, lebar : 20);
