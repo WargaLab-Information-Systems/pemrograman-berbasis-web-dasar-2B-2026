@@ -1,0 +1,55 @@
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #f8f9fa !important;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f !important;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .navbar-brand, 
+body.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card {
+    background-color: #242424 !important;
+    color: white !important;
+    border: 1px solid #383838;
+}
+
+body.dark-mode .form-control {
+    background-color: #2d2d2d !important;
+    color: white !important;
+    border: 1px solid #444;
+}
+
+/* Warna tombol saat dark mode agar tetap kontras */
+body.dark-mode #darkModeToggle {
+    color: #ffca28;
+    border-color: #ffca28;
+}
+/* Menghapus warna hitam pada teks saat dark mode aktif */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6, 
+body.dark-mode p, 
+body.dark-mode span,
+body.dark-mode label {
+    color: #ffffff !important; /* Pakai !important agar menimpa warna default */
+}
+.dark-mode .hero-section {
+    color: white;
+}
+
+.dark-mode .hero-section span {
+    color: white !important;
+}

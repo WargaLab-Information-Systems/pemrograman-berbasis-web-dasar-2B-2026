@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Prospective Students</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8faff;
+        }
+        .row.h-100 {
+            min-height: 100vh;
+        }
+        .left-section {
+            background-color: #5c72bd;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10%;
+        }
+        .illustration {
+            max-width: 100%;
+            height: auto;
+            margin: 40px 0;
+            border-radius: 15px;
+        }
+        .right-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .form-control {
+            border-radius: 10px;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            background-color: white;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25 margin rgba(92, 114, 189, 0.25);
+            border-color: #5c72bd;
+        }
+        .btn-login {
+            background-color: #3f51b5;
+            color: white;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-login:hover {
+            background-color: #303f9f;
+            transform: translateY(-1px);
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #adb5bd;
+            margin: 25px 0;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .divider span {
+            padding: 0 15px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .google-login {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            color: #444;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .google-login:hover {
+            background-color: #f1f3f4;
+            color: #000;
+        }
+        .error-message {
+            font-size: 0.8rem;
+            color: #dc3545;
+            text-align: left;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            height: 18px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid p-0 h-100">
+    <div class="row g-0 h-100">
+        <div class="col-lg-6 left-section d-none d-lg-flex">
+            <h1 class="fw-bold display-5">Hello Prospective Students</h1>
+            <img src="gambar_login page.png" alt="IMG_20260504_153153.jpg" class="illustration">
+            <p class="lead opacity-75">Unlock your professional potential. Learn from industry leaders and stay ahead of the competition.</p>
+        </div>
+        <div class="col-lg-6 right-section">
+            <div class="login-card">
+                <h2 class="fw-bold mb-1">LOGIN PAGE</h2>
+                <p class="text-muted mb-4">Masukkan Username dan Password Anda</p>
+                
+                <form id="formLogin" novalidate>
+                    <div class="mb-3">
+                        <input type="email" id="emailInput" class="form-control" placeholder="Email Address">
+                        <div id="errEmail" class="error-message"></div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <input type="password" id="passInput" class="form-control" placeholder="Password">
+                        <div id="errPass" class="error-message"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-login mb-2">Login</button>
+                </form>
+
+                <div class="divider">
+                    <span>Or Login With</span>
+                </div>
+
+                <a href="#" class="google-login">
+                    <img src="https://brandlogo.org/wp-content/uploads/2025/05/Google-G-Icon-2025.png" alt="Google" width="18" class="me-2">
+                    Sign in with Account Google
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('formLogin').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('emailInput');
+    const password = document.getElementById('passInput');
+    const errEmail = document.getElementById('errEmail');
+    const errPass = document.getElementById('errPass');
+
+    errEmail.textContent = "";
+    errPass.textContent = "";
+    let statusValid = true;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.value.trim() === "") {
+        errEmail.textContent = "Email wajib diisi.";
+        statusValid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
+        errEmail.textContent = "Format email tidak valid.";
+        statusValid = false;
+    }
+
+    if (password.value.trim() === "") {
+        errPass.textContent = "Password tidak boleh kosong.";
+        statusValid = false;
+    } else if (password.value.length < 6) {
+        errPass.textContent = "Password minimal 6 karakter.";
+        statusValid = false;
+    }
+
+    if (statusValid) {
+        console.log("Data siap dikirim:", { email: email.value, pass: password.value });
+        alert("Sip, data sudah benar! Lanjut proses login.");
+    }
+});
+
+</script>
+
+</body>
+</html>
