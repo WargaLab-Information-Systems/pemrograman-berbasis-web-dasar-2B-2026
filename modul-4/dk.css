@@ -1,0 +1,15 @@
+html.dark body {
+  background-color: #111827;
+  color: #f9fafb;
+}
+html.dark nav,
+html.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+html.dark .bg-hero {
+  background-color: #111827 !important;
+}
+
+html.dark footer {
+  background-color: #1e3a5f !important;
+}
